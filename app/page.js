@@ -3,7 +3,7 @@ export default function Home() {
     <>
 
       {/* Frame 28036 */}
-      <div className="relative bg-palevioletred h-8 flex flex-row items-center justify-center py-[10px] px-[529px] h-[32px] w-[1440px] gap-[10px] box-border text-left text-[12px] text-white font-montserrat">
+      <div className="w-full relative bg-palevioletred h-8 flex flex-row items-center justify-center py-[10px] px-[529px] h-[32px] gap-[10px] box-border text-left text-[12px] text-white font-montserrat">
         <div className="flex flex-row items-center justify-center py-0 px-[492.5px] w-[1395px] h-[15px] gap-[10px]">
           <div className="relative uppercase w-[410px] h-[15px] leading-[14.63px]">
             <b>ENDS SOON!</b>
