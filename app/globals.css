@@ -23,3 +23,14 @@ body {
 *, ::before, ::after { 
   border-width: 0; 
 }
+
+/* Add this to your global CSS */
+.bg-gradient-hover {
+  background: linear-gradient(transparent, transparent);
+}
+
+.group:hover .bg-gradient-hover {
+  background: linear-gradient(white, white);
+}
+
+

@@ -13,7 +13,7 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
-    colors:{
+    colors: {
       'palevioletred': '#a63e60',
       'white': '#fff',
       'maroon': '#4a1521',
@@ -21,17 +21,24 @@ module.exports = {
       'green': '#149C48',
       'red': '#EB1C26',
       'lightgray': '#F0F0F0',
+      'gray': {
+        '100': 'rgba(255, 255, 255, 0.8)',
+        '200': 'rgba(22, 6, 10, 0.8)',
+        '300': 'rgba(22, 6, 10, 0.48)',
+        '400': 'rgba(255, 255, 255, 0.48)'
+      },
     },
-    spacing:{},
-    fontFamily:{
+    spacing: {},
+    fontFamily: {
       "montserrat": "Montserrat",
       "josefin-sans": "'Josefin Sans'"
     },
-    fontSize:{
+    fontSize: {
+      "base": "16px",
       "inherit": "inherit"
-    }
+    },
   },
-  corePlugins:{
+  corePlugins: {
     preflight: false
   },
   plugins: [],
