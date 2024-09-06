@@ -100,7 +100,7 @@ export default function Home() {
         <div className="absolute h-full w-[66.67%] top-[0%] right-[0%] bottom-[0%] left-[33.33%]" />
 
         {/* <!-- Adjusted Text and Button Container --> */}
-        <div className="absolute h-[35.56%] w-[44.64%] top-[52%] right-[3.48%] bottom-[12.44%] left-[51.88%] flex flex-col items-start justify-start gap-[36px]">
+        <div className="absolute h-[35.56%] w-[46.64%] top-[52%] right-[3.48%] bottom-[12.44%] left-[51.88%] flex flex-col items-start justify-start gap-[36px]">
           <div className="self-stretch flex flex-col items-start justify-start gap-[8px]">
             <div className="relative h-[40px] leading-[40px] font-semibold">Bold. Redefined. Distinctly Yours.</div>
             <div className="relative h-[28px] text-[18px] leading-[28px] font-medium text-black">Crafted for the Modern Man</div>
@@ -133,9 +133,20 @@ export default function Home() {
     <>
 
       {/* Frame 28036 */}
-      <div className="w-full relative bg-palevioletred h-8 flex flex-row items-center justify-center py-[10px] px-[529px] h-[32px] gap-[10px] box-border text-left text-[12px] text-white font-montserrat">
+
+      {/* <div className="w-full relative bg-palevioletred h-8 flex flex-row items-center justify-center py-[10px] px-[529px] h-[32px] gap-[10px] box-border text-left text-[12px] text-white font-montserrat">
         <div className="flex flex-row items-center justify-center py-0 px-[492.5px] w-[1395px] h-[15px] gap-[10px]">
           <div className="relative uppercase w-[410px] h-[15px] leading-[14.63px]">
+            <b>ENDS SOON!</b>
+            <span className="font-medium"> Free Diamond Jewellery With All Purchases. </span>
+          </div>
+        </div>
+      </div> */}
+
+      <div className="w-full relative bg-palevioletred h-8 flex flex-row items-center justify-center py-[10px] gap-[10px] box-border text-left text-white font-montserrat
+    sm:h-[32px] sm:py-[10px] sm:gap-[2vw] text-[12px]">
+        <div className="flex flex-row items-center justify-center w-full h-[15px] gap-[10px] px-[5vw] max-w-[1280px]">
+          <div className="relative uppercase w-[273px] h-[10px] sm:w-[410px] sm:h-[15px] leading-[9.75px] sm:leading-[14.63px] text-[8px] sm:text-[12px]">
             <b>ENDS SOON!</b>
             <span className="font-medium"> Free Diamond Jewellery With All Purchases. </span>
           </div>
@@ -144,7 +155,7 @@ export default function Home() {
 
       {/* Frame 28037 */}
 
-      <div className="w-full relative bg-maroon flex flex-col items-start justify-start py-[16px] px-[80px] gap-[10px] box-border text-left text-[12px] text-white font-josefin-sans">
+      {/* <div className="w-full relative bg-maroon flex flex-col items-start justify-start py-[16px] px-[80px] gap-[10px] box-border text-left text-[12px] text-white font-josefin-sans">
         <div className="w-[1280.2px] relative h-[56px]">
           <div className="absolute top-[0px] left-[0px] flex flex-row items-center justify-start gap-[302px] ">
             <div className="w-[720.17px] h-[56px] flex flex-row items-center justify-between">
@@ -171,7 +182,57 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div> */}
+
+      <div className="w-full relative bg-maroon flex flex-col items-start justify-start py-[16px] px-[20px] md:px-[80px] gap-[10px] box-border text-left text-[12px] text-white font-josefin-sans">
+        <div className="w-full relative h-[35px] md:h-[56px]">
+          <div className="absolute top-[0px] left-[0px] flex flex-row items-center justify-between w-full max-w-[1340px]">
+
+            {/* First part: Icons for mobile and desktop */}
+            <div className="flex flex-row items-center justify-between gap-[10px] md:gap-[30px]">
+              {/* Hamburger menu only on mobile */}
+              <img className="w-6 h-6 md:hidden" alt="Hamburger Menu" src="menu-01.svg" />
+              {/* Frame icon (visible on both mobile and desktop) */}
+              <img className="w-6 h-6" alt="Frame" src="Frame.png" />
+              {/* Instagram icon (visible only on larger screens) */}
+              <img className="w-6 h-6 hidden md:block" alt="Instagram" src="Instagram.svg" />
+            </div>
+
+            {/* Site logo with auto margins for equal spacing on mobile */}
+            <div className="flex-1 flex items-center justify-center md:justify-between">
+              <img
+                className="h-[38px] w-[110px] md:h-[56px] md:w-[160.2px] object-cover mx-auto md:mr-[302px]"
+                alt="Site Logo"
+                src="assests_teamcoachingAsset 1@4x.png"
+              />
+            </div>
+            {/* Third part: Icons for user and shopping bag on mobile, all icons on desktop */}
+            <div className="flex flex-row items-center justify-between gap-[10px] md:gap-[25px]">
+              {/* Only user and shopping bag on mobile */}
+              <div className="flex md:hidden flex-row items-center justify-between gap-[10px]">
+                <img className="w-6 h-6" alt="User" src="user-03.svg" />
+                <img className="w-6 h-6" alt="Shopping Bag" src="shopping-bag-02.svg" />
+              </div>
+
+              <div className="hidden md:flex flex-row items-center justify-between gap-[25px]">
+                <img className="w-6 h-6" alt="Search" src="search-md.svg" />
+                <img className="w-6 h-6" alt="User" src="user-03.svg" />
+                <img className="w-6 h-6" alt="Heart" src="heart.svg" />
+                <img className="w-6 h-6" alt="Shopping Bag" src="shopping-bag-02.svg" />
+              </div>
+              {/* Currency and Dropdown (Only for Larger Screens) */}
+              <div className="hidden md:flex flex-row items-center justify-start gap-[4px]">
+                <div className="flex flex-row items-center justify-start gap-[6px]">
+                  <img className="w-6 h-6" alt="Currency Icon" src="Mask group.svg" />
+                  <div className="w-[26px] h-[18px] leading-[18px] uppercase font-normal">AED</div>
+                </div>
+                <img className="w-3 h-3" alt="Dropdown" src="Chevron down.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
 
       {/* Dropdown Component */}
 
@@ -240,6 +301,112 @@ export default function Home() {
           ))}
         </div>
       </div>
+
+      {/* Shop Diamonds by Shape Component */}
+
+      {/* <div className="w-full flex justify-center mt-[80px]">
+        <div className="relative w-[1280px] h-[214px] px-[80px] flex flex-col items-start gap-[36px] text-center text-[36px] text-gray font-montserrat">
+          
+          <div className="self-stretch relative leading-[40px] font-semibold">
+            Shop Diamonds by Shape
+          </div>
+
+         
+          <div className="w-full flex flex-row items-center justify-between py-5 text-base">
+           
+            <div className="flex flex-col items-center justify-start gap-3.5">
+              <img
+                className="w-[60.2px] h-[60px] object-cover"
+                alt="Round"
+                src="diamond-podium-generative-ai 1.png"
+              />
+              <div className="w-[100px] leading-[24px] font-medium">Round</div>
+            </div>
+
+            <div className="flex flex-col items-center justify-start gap-3.5">
+              <img
+                className="w-[42.9px] h-[60px] object-cover"
+                alt="Oval"
+                src="Clip path group dimension check.png"
+              />
+              <div className="w-[100px] leading-[24px] font-medium">Oval</div>
+            </div>
+
+            <div className="flex flex-col items-center justify-start gap-3.5">
+              <img
+                className="w-[42.1px] h-[60px] object-cover"
+                alt="Emerald"
+                src="Screenshot 1946-05-01 at 17.31.42 1.png"
+              />
+              <div className="w-[100px] leading-[24px] font-medium">Emerald</div>
+            </div>
+
+            <div className="flex flex-col items-center justify-start bg-opacity-0 gap-3.5">
+              <img
+                className="w-[56.8px] h-[60px] object-cover"
+                alt="Cushion"
+                src="Clip path group.png"
+              />
+              <div className="w-[100px] leading-[24px] font-medium">Cushion</div>
+            </div>
+
+            <div className="flex flex-col items-center justify-start gap-3.5">
+              <img
+                className="w-[38px] h-[60px] object-cover"
+                alt="Pear"
+                src="Clip path group.png"
+              />
+              <div className="w-[100px] leading-[24px] font-medium">Pear</div>
+            </div>
+
+            <div className="flex flex-col items-center justify-start gap-3.5">
+              <img
+                className="w-[44.6px] h-[60px] object-cover"
+                alt="Radiant"
+                src="Screenshot 1946-05-01 at 17.29.23 1.png"
+              />
+              <div className="w-[100px] leading-[24px] font-medium">Radiant</div>
+            </div>
+
+            <div className="flex flex-col items-center justify-start gap-3.5">
+              <img
+                className="w-[54.5px] h-[60px] object-cover"
+                alt="Princess"
+                src="Screenshot 1946-05-01 at 17.33.17 1.png"
+              />
+              <div className="w-[100px] leading-[24px] font-medium">Princess</div>
+            </div>
+
+            <div className="flex flex-col items-center justify-start gap-3.5">
+              <img
+                className="w-[34.7px] h-[60px] object-cover"
+                alt="Marquise"
+                src="Clip path group.png"
+              />
+              <div className="w-[100px] leading-[24px] font-medium">Marquise</div>
+            </div>
+
+            <div className="flex flex-col items-center justify-start gap-3.5">
+              <img
+                className="w-[60.5px] h-[60px] object-cover"
+                alt="Asscher"
+                src="Clip path group.png"
+              />
+              <div className="w-[100px] leading-[24px] font-medium">Asscher</div>
+            </div>
+
+            <div className="flex flex-col items-center justify-start gap-3.5">
+              <img
+                className="w-[60px] h-[60px] object-cover"
+                alt="Heart"
+                src="Clip path group.png"
+              />
+              <div className="w-[100px] leading-[24px] font-medium">Heart</div>
+            </div>
+          </div>
+        </div>
+      </div> */}
+
 
 
 
