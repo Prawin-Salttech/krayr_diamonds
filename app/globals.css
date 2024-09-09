@@ -14,10 +14,87 @@
   }
 }
 
+
+
+
+
+
 /* Apply the custom m-0 class and other utilities to the body */
 body {
   @apply leading-normal m-0;
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Stay at the first image (initial pause) */
+  }
+  5% {
+    transform: translateX(0); /* Hold for the initial pause */
+  }
+  45% {
+    transform: translateX(calc(-100% + 100vw)); /* Scroll forward until the last image is fully visible */
+  }
+  50% {
+    transform: translateX(calc(-100% + 100vw)); /* Pause at the last image */
+  }
+  55% {
+    transform: translateX(calc(-100% + 100vw)); /* Short pause at the last image */
+  }
+  100% {
+    transform: translateX(0); /* Scroll back to the start */
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  animation: scroll 30s linear infinite;
+}
+
+.relative:hover .animate-scroll {
+  animation-play-state: paused;
+} 
+
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .dynamic-mr {
+    margin-right: 60px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .dynamic-mr {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .dynamic-px {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .dynamic-px {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.zoom-in {
+  transition: transform 0.3s ease-in-out;
+}
+
+.zoom-in:hover {
+  transform: scale(1.1); /* Adjust scale factor as needed */
+}
+
+
+
+
+
+
+
+
 
 /* Reset border width for all elements and pseudo-elements */
 *, ::before, ::after { 
