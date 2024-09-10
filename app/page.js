@@ -1508,7 +1508,7 @@ export default function Home() {
                     <svg className="w-[6px] h-[12px] mx-[auto]" viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg">
                       <path id="Icon" d="M1 13L7 7L1 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                     </svg>
-                  </button> 
+                  </button>
                 </div>
                 <div className="mt-[20px] flex space-x-[10px]">
                   <img src="Instagram.png" alt="Logo 1" className="w-[20px] h-[20px]" />
@@ -1525,9 +1525,10 @@ export default function Home() {
         </div>
 
         {/* Bottom Text Container */}
-        <div className="w-[1440px] h-[18px] mt-[42px] mb-[20px] text-center font-montserrat text-[12px] text-gray-200 font-medium leading-[18px]">
+        <div className="w-full h-[18px] mt-[42px] mb-[20px] text-center font-montserrat text-[12px] text-gray-200 font-medium leading-[18px] flex justify-center">
           ©2024 Krayr Diamonds | Terms and Conditions | Privacy Policy
         </div>
+
       </div>
 
 
