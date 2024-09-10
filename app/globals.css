@@ -15,6 +15,12 @@
 }
 
 
+#image-carousel {
+  transition: transform 0.6s ease-out; /* Adjust duration and easing function */
+}
+
+
+
 
 
 
@@ -87,6 +93,8 @@ body {
 .zoom-in:hover {
   transform: scale(1.1); /* Adjust scale factor as needed */
 }
+
+
 
 
 

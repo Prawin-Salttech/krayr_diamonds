@@ -209,6 +209,79 @@ export default function Home() {
 
 
 
+  const [carouselOffset, setCarouselOffset] = useState(0);
+  const [containerWidth, setContainerWidth] = useState(0);
+  const [isAtEnd, setIsAtEnd] = useState(false);
+  const [isAtStart, setIsAtStart] = useState(true)
+  const imageWidth = 320; // Width of each image
+  const gap = 16; // Gap between images
+  const totalImages = 7; // Total number of images
+
+  useEffect(() => {
+    // Update container width
+    const updateContainerWidth = () => {
+      const container = document.getElementById("carousel-container");
+      if (container) {
+        setContainerWidth(container.offsetWidth);
+      }
+    };
+
+    updateContainerWidth();
+
+    // Handle window resize
+    window.addEventListener('resize', updateContainerWidth);
+    return () => window.removeEventListener('resize', updateContainerWidth);
+  }, []);
+
+  useEffect(() => {
+    const totalWidth = (imageWidth + gap) * totalImages - gap;
+    setIsAtEnd(Math.abs(carouselOffset) >= totalWidth - containerWidth);
+    setIsAtStart(carouselOffset === 0);
+  }, [carouselOffset, containerWidth]);
+
+
+
+  const handleScroll = (direction) => {
+    // const imageCarousel = document.getElementById("image-carousel");
+
+    const totalWidth = (imageWidth + gap) * totalImages - gap; // Total width of all images minus the gap at the end
+    const padding = 32
+
+    let newOffset = carouselOffset;
+
+
+    if (direction === "right") {
+      const maxOffset = -(totalWidth - containerWidth + padding);
+      newOffset = Math.max(maxOffset, carouselOffset - containerWidth + gap);
+
+      if (Math.abs(newOffset) + containerWidth > totalWidth) {
+        newOffset = maxOffset;
+      }
+    } else if (direction === "left") {
+      newOffset = Math.min(0, carouselOffset + containerWidth - gap);
+    }
+
+    // const imageCarousel = document.getElementById("image-carousel");
+    // if (imageCarousel) {
+    //   imageCarousel.style.transform = `translateX(${newOffset}px)`;
+    // }
+
+    setCarouselOffset(newOffset);
+
+  };
+
+  useEffect(() => {
+    if (isAtEnd) {
+      const timer = setTimeout(() => {
+        handleScroll("left");
+      }, 2000); // Scroll back after 2 seconds
+
+      return () => clearTimeout(timer); // Clean up timer on component unmount
+    }
+  }, [isAtEnd]);
+
+
+
 
 
 
@@ -995,7 +1068,7 @@ export default function Home() {
             <p className="m-0">Diamonds that Embody both</p>
             <p className="m-0">Sustainability and Style</p>
           </div>
-          <WhiteButtonPrimary className="w-[316px] h-[48px] bg-blue-600 text-black">Know More</WhiteButtonPrimary>
+          <WhiteButtonPrimary className="w-[316px] h-[48px] text-black">Know More</WhiteButtonPrimary>
         </div>
 
 
@@ -1116,14 +1189,14 @@ export default function Home() {
         {/* First Text Container */}
         <div className="w-[640px] h-[40px] mx-auto text-center">
           <p className="font-montserrat font-semibold text-[36px] leading-[40px]">
-          Krayr Love Notes
+            Krayr Love Notes
           </p>
         </div>
 
         {/* Second Text Container */}
         <div className="w-[512px] h-[48px] mx-auto mt-[14px] text-center">
           <p className="font-montserrat font-medium text-[16px] leading-[24px]">
-          Craft custom jewellery that reflects your style and personality. We'll help you create a truly special piece.
+            Craft custom jewellery that reflects your style and personality. We'll help you create a truly special piece.
           </p>
         </div>
 
@@ -1135,15 +1208,15 @@ export default function Home() {
             {/* First Text Container Below Image */}
             <div className="mt-[18px] w-full h-[120px]">
               <p className="font-montserrat font-medium text-[16px] leading-[24px]">
-              "Finding the perfect diamond was effortless with 
-              Krayr. Their extensive selection, from classic styles to
-              vibrant colored lab diamonds, provides endless options."
+                "Finding the perfect diamond was effortless with
+                Krayr. Their extensive selection, from classic styles to
+                vibrant colored lab diamonds, provides endless options."
               </p>
             </div>
             {/* Second Text Container Below Image */}
             <div className="mt-[18px] w-full h-[20px]">
               <p className="font-montserrat font-medium text-[14px] leading-[20px]">
-              - Amir Mansour
+                - Amir Mansour
               </p>
             </div>
           </div>
@@ -1154,17 +1227,17 @@ export default function Home() {
             {/* First Text Container Below Image */}
             <div className="mt-[18px] w-full h-[120px]">
               <p className="font-montserrat font-medium text-[16px] leading-[24px]">
-              "Krayr stands out with its vast array of diamond options.
-              With numerous styles, carat sizes, cuts, and
-              colors to choose from, their Lab Diamonds and Lab 
-              Created Colored Diamonds are the best I've seen
-              in the market."
+                "Krayr stands out with its vast array of diamond options.
+                With numerous styles, carat sizes, cuts, and
+                colors to choose from, their Lab Diamonds and Lab
+                Created Colored Diamonds are the best I've seen
+                in the market."
               </p>
             </div>
             {/* Second Text Container Below Image */}
             <div className="mt-[18px] w-full h-[20px]">
               <p className="font-montserrat font-medium text-[14px] leading-[20px]">
-              - Amanda Rose
+                - Amanda Rose
               </p>
             </div>
           </div>
@@ -1175,16 +1248,16 @@ export default function Home() {
             {/* First Text Container Below Image */}
             <div className="mt-[18px] w-full h-[120px]">
               <p className="font-montserrat font-medium text-[16px] leading-[24px]">
-              “Krayr's collection of diamonds is truly impressive.
-              They offer a diverse range of styles, carats, cuts, and 
-              colors. The variety and quality of their Lab Diamonds
-              and Lab Created Colored Diamonds are unparalleled."
+                “Krayr's collection of diamonds is truly impressive.
+                They offer a diverse range of styles, carats, cuts, and
+                colors. The variety and quality of their Lab Diamonds
+                and Lab Created Colored Diamonds are unparalleled."
               </p>
             </div>
             {/* Second Text Container Below Image */}
             <div className="mt-[18px] w-full h-[20px]">
               <p className="font-montserrat font-medium text-[14px] leading-[20px]">
-              - Fatima Ahmed
+                - Fatima Ahmed
               </p>
             </div>
           </div>
@@ -1197,6 +1270,270 @@ export default function Home() {
           </button>
         </div>
       </div>
+
+      {/* Get Inspired and shop Instagram component for Larger screens */}
+
+
+      <div className="relative hidden md:block xl:mx-[20px] 2xl:px-[30px] xl:px-[20px] 2xl:mx-[65px] mt-[96px] max-w-full xl:max-w-[1200px] 2xl:max-w-[1380px] h-[468px] bg-maroon overflow-hidden px-[32px]" >
+        <div id="carousel-container" className="relative mx-auto mt-[10px] w-full xl:w-[1200px]w-[1316px] h-[372px]">
+          <div className="flex items-center justify-between relative">
+            <div className="w-auto">
+              <p className="font-montserrat font-semibold text-[30px] text-white leading-[15px]">Get Inspired</p>
+            </div>
+            <div className="w-auto xl:absolute xl:right-[10px]">
+              <p className="font-montserrat font-semibold text-[16px] leading-[28px] underline text-white whitespace-nowrap">Shop Instagram</p>
+            </div>
+          </div>
+
+          <div
+            className="flex space-x-[16px] mt-[26px] transition-transform duration-500"
+            id="image-carousel"
+            style={{ transform: `translateX(${carouselOffset}px)` }}
+          >
+            {/* <button
+              className={`absolute left-[30px] top-[50%] transform -translate-y-[50%] text-white rounded-full p-0 w-[44px] h-[44px] items-center justify-center z-20 ${isAtStart ? 'hidden' : ''}`}
+              id="chevron-left"
+              onClick={() => handleScroll("left")}
+            >
+              <img src="Ellipse 11.svg" alt="Ellipse" className="w-full h-full" />
+              <img src="Chevron left.svg" alt="Chevron Left" className="absolute w-[24px] h-[24px] top-[50%] left-[50%] transform -translate-x-[50%] -translate-y-[50%]" />
+            </button> */}
+
+            <div className="flex space-x-[16px]">
+              <div className="relative w-[320px] h-[310px] group bg-cover bg-center" style={{ backgroundImage: `url('get inspired 1.png')` }}>
+                {/* Hover Overlay */}
+                <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-20">
+                  <p className="text-white font-montserrat text-[20px] underline">Shop Now</p>
+                </div>
+
+                {/* Shadow on Hover */}
+                <div className="absolute top-0 left-0 w-full h-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-10"></div>
+              </div>
+
+
+              <img src="get inspired 2.png" alt="Image 2" className="w-[320px] h-[310px]" />
+              <img src="get inspired 3.png" alt="Image 3" className="w-[320px] h-[310px]" />
+              <img src="get inspired 4.png" alt="Image 4" className="w-[320px] h-[310px]" />
+              <img src="get inspired 1.png" alt="Image 5" className="w-[320px] h-[310px]" />
+              <img src="get inspired 2.png" alt="Image 6" className="w-[320px] h-[310px]" />
+              <img src="get inspired 3.png" alt="Image 7" className="w-[320px] h-[310px]" />
+            </div>
+
+            <button
+              className={`absolute right-[20px] 2xl:mx-[10px] xl:right-[0.5px] top-[50%] transform -translate-y-[50%] text-white rounded-full p-0 w-[44px] h-[44px] flex items-center justify-center ${isAtEnd ? 'hidden' : ''}`}
+              id="chevron-right"
+              onClick={() => handleScroll('right')}
+            >
+              <img src="Ellipse 11.svg" alt="Ellipse" className="w-full h-full" />
+              <img src="Chevron right.svg" alt="Chevron Right" className="absolute w-[24px] h-[24px]" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Krayr collection 2 for larger screens */}
+
+      <div className="w-full hidden md:flex  mt-[126px] h-[400px] relative">
+        <img src="krayr-collection 2.jpg" alt="Background Image" className="absolute inset-0 w-full h-full object-cover" />
+
+        <div className="absolute top-[104px] xl:left-[35px] 2xl:left-[66px]">
+          <div className="w-[448px] h-[48px] font-semibold text-[36px] leading-[40px] text-white font-montserrat">
+            <p className="m-0">Krayr Collection</p>
+          </div>
+          <div className="w-[448px] h-[48px] font-medium text-[16px] leading-[24px] text-white font-montserrat mt-[24px] mb-[48px]">
+
+            <p className="m-0">Krayr designs feature textural details, unique petal</p>
+            <p className="m-0">motifs, and delicate diamond leaves.</p>
+          </div>
+          <WhiteButtonPrimary className="w-[316px] h-[48px] text-black">Shop Krayr Collection Now</WhiteButtonPrimary>
+        </div>
+      </div>
+
+      {/* Join the Krayr Universe component for Larger Screens */}
+
+      <div className="absolute hidden md:block mt-[96px] left-[208px] right-[784px] w-[448px] h-[112px]">
+        {/* First Text Container */}
+        <div className="w-[435px] h-[40px]">
+          <p className="font-montserrat font-semibold text-[30px] text-black leading-[40px]">
+            {/* Your text content for the first container */}
+            Join The Krayr Universe
+          </p>
+        </div>
+
+        {/* Gap of 24px between text containers */}
+        <div className="mt-[24px] w-[446px] h-[48px]">
+          {/* Second Text Container */}
+          <p className="font-montserrat font-medium text-[16px] text-gray-200 leading-[24px]">
+            {/* Your text content for the second container */}
+            Discover its magnificent icons, personalised services and unique experiences
+          </p>
+        </div>
+      </div>
+
+      {/* Learn More button for Larger Screens */}
+
+      <div className="absolute mt-[160px] hidden md:block 2xl:left-[956px] xl:left-[850px] xl:right-[160px] 2xl:right-[120px] w-[316px] h-[48px]">
+        <button
+          className="w-full h-full bg-palevioletred hover:bg-fadedpalevioletred active:bg-fadedpalevioletred transition ease-in-out duration-200 text-white font-montserrat font-semibold text-[16px] leading-[24px]"
+        >
+          Learn More
+        </button>
+      </div>
+
+      {/* Footer Component for larger screens  */}
+
+
+      {/* Top-level Footer Container */}
+      <div className="w-full h-[665px] mt-[300px] hidden md:block">
+        {/* First Inner Container (Background) */}
+        <div className="h-[610px] bg-whitesmoke relative">
+          {/* Vector Logo */}
+          <img
+            src="Path 652.png"
+            alt="Vector Logo"
+            className="absolute top-0 left-0 w-[479px] h-[623px] z-10"
+          />
+
+          <div className="flex justify-center mb-[56px]">
+            <img
+              src="krayr logo white.svg"
+              alt="Brand Logo"
+              className="w-[196px] h-[56px]"
+            />
+          </div>
+
+          {/* Footer Content - Fourth Container */}
+          <div className="w-[1280px] h-[528px] mt-[64px] mb-[18px] mx-[80px] relative z-20">
+            {/* Brand Logo */}
+
+
+            {/* Footer Navigation (6 Containers) */}
+            <div className="2xl:w-[1280px] xl:w-[1000px] h-[416px] grid grid-cols-3 gap-x-[20px] 2xl:gap-x-[103px] xl:gap-x-[120px] gap-y-[48px]">
+              {/* Container 1 */}
+              <div>
+                <p className="font-montserrat uppercase font-semibold text-[14px] leading-[20px] text-black">
+                  About
+                </p>
+                <div className="mt-[14px] w-[358px] h-[176px]">
+                  <div className="font-montserrat font-medium text-[14px] text-gray-200 leading-[15px]">
+                    <p>Our Story</p>
+                    <p>Our Mission</p>
+                    <p>Responsible Sourcing</p>
+                    <p>Sustainability Goals</p>
+                    <p>How We Give Back</p>
+                    <p>Our People</p>
+                    <p>Krayr Reviews</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Container 2 */}
+              <div>
+                <p className="font-montserrat uppercase font-semibold text-[14px] leading-[20px] text-black">
+                  Orders
+                </p>
+                <div className="mt-[14px] w-[358px] h-[124px]">
+                  <div className="font-montserrat font-medium text-[14px] text-gray-200 leading-[15px]">
+                    <p>My Account</p>
+                    <p>Wishlist</p>
+                    <p>Track My Order</p>
+                    <p>Shipping Information</p>
+                    <p>Warranty</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Container 3 */}
+              <div>
+                <p className="font-montserrat uppercase font-semibold text-[14px] leading-[20px] text-black">
+                  contact us
+                </p>
+                <div className="mt-[14px] w-[358px] h-[98px]">
+                  <div className="font-montserrat font-medium text-[14px] text-gray-200 leading-[15px]">
+                    <p>Book Appointment</p>
+                    <p>+971 123 456 7890</p>
+                    <p>Email Us</p>
+                    <p>Chat</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Container 4 */}
+              <div className="mt-[35px]">
+                <p className="font-montserrat uppercase font-semibold text-[14px] leading-[20px] text-black">
+                  education
+                </p>
+                <div className="mt-[14px] w-[176px] h-[124px]">
+                  <div className="font-montserrat font-medium text-[14px] text-gray-200 leading-[15px]">
+                    <p>Diamond Buying Guide</p>
+                    <p>Lab Grown Diamonds</p>
+                    <p>Moissanite vs. Diamonds</p>
+                    <p>Ring Size Chart</p>
+                    <p>Bracelet Size Chart</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Container 5 */}
+              <div className="mt-[35px]">
+                <p className="font-montserrat uppercase font-semibold text-[14px] leading-[20px] text-black">
+                  Customer service
+                </p>
+                <div className="mt-[14px] w-[358px] h-[46px]">
+                  <div className="font-montserrat font-medium text-[14px] text-gray-200 leading-[15px]">
+                    <p>FAQs</p>
+                    <p>Refer a Friend</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Container 6 - Email Section */}
+              <div className="mt-[35px]">
+                <p className="font-montserrat uppercase font-semibold text-[14px] leading-[20px] text-black">
+                  sign up for email
+                </p>
+                <div className="mt-[14px] w-[358px] h-[20px]">
+                  <p className="font-montserrat font-medium text-[14px] text-gray-200 leading-[15px]">
+                    Send me Krayr news, updates and offers.
+                  </p>
+                </div>
+                <div className="mt-[8px] flex items-center">
+                  <input
+                    type="text"
+                    placeholder="Your Email Address"
+                    className="border border-gray-300 w-[358px] h-[auto] pl-[12px] py-[14px] text-montserrat font-medium text-[12px] text-gray-200 leading-[18px]"
+                  />
+                  <button className="bg-palevioletred w-[48px] h-[48px] flex justify-center items-center">
+                    {/* Icon */}
+                    <svg className="w-[6px] h-[12px] mx-[auto]" viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg">
+                      <path id="Icon" d="M1 13L7 7L1 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    </svg>
+                  </button> 
+                </div>
+                <div className="mt-[20px] flex space-x-[10px]">
+                  <img src="Instagram.png" alt="Logo 1" className="w-[20px] h-[20px]" />
+                  <img
+                    src="Group.svg"
+                    alt="Logo 2"
+                    className="w-[14.47px] h-[auto]"
+                  />
+                  <img src="Facebook.png" alt="Logo 3" className="w-[20px] h-[20px]" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Text Container */}
+        <div className="w-[1440px] h-[18px] mt-[42px] mb-[20px] text-center font-montserrat text-[12px] text-gray-200 font-medium leading-[18px]">
+          ©2024 Krayr Diamonds | Terms and Conditions | Privacy Policy
+        </div>
+      </div>
+
+
+
+
+
 
 
 

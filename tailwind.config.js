@@ -16,6 +16,7 @@ module.exports = {
     colors: {
       'palevioletred': '#a63e60',
       'fadedpalevioletred': 'rgba(166, 62, 96, 0.72)',
+      'whitesmoke': '#f9f6f4',
       'white': '#fff',
       'maroon': '#4a1521',
       'black': '#000000',
