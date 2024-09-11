@@ -390,7 +390,7 @@ export default function Home() {
       </div>
 
 
-      {/* Dropdown Component */}
+
 
       <div>
         {/* Mobile View Component */}
@@ -416,9 +416,11 @@ export default function Home() {
         </div>
 
 
+        {/* Navbar Component for larger screens */}
+
 
         {/* Larger Screen Component (For Laptops and Desktops) */}
-        <div className="hidden md:block w-full relative h-[10vh] text-left text-sm text-black font-montserrat">
+        <div className="hidden md:block w-full relative h-[10vh] text-left text-sm text-black font-montserrat" style={{ overflow: 'hidden' }}>
           <div className="w-full h-full flex flex-col justify-between items-center 2xl:px-[259px] pt-[20px] xl:px-[131px]">
             <div className="w-full max-w-[1536px] flex flex-row items-center justify-start gap-[48px]">
               <div className="leading-[1.25rem] uppercase font-medium whitespace-nowrap">Engagement Rings</div>
@@ -976,6 +978,128 @@ export default function Home() {
         </div>
       </div>
 
+
+
+      {/* Shop Diamonds by category for Mobile Screens */}
+
+      <div className="mt-[44px] block md:hidden mx-[20px] max-w-[414px]">
+        {/* Shop by Category Title */}
+        <div className="w-[320px] h-[30px] mb-[32px]">
+          <p className="font-montserrat font-semibold text-[24px] leading-[30px] text-center">
+            Shop by Category
+          </p>
+        </div>
+
+        {/* Container with Flexbox and Gap for Spacing */}
+        <div className="flex flex-col gap-y-[50px]">
+          {/* First Row */}
+          <div className="flex justify-between gap-[10px]">
+            {/* First Image */}
+            <div className="w-[154px] h-[150px]">
+              <img
+                src="engagement rings mobile.png"
+                alt="Category 1"
+                className="w-full h-full"
+              />
+              <div className="w-[154px] h-[21px] mt-[8px]">
+                <p className="font-montserrat uppercase font-normal text-[12px] leading-[21px] text-center text-[#4A1521]">
+                  Engagement Rings
+                </p>
+              </div>
+            </div>
+
+            {/* Second Image */}
+            <div className="w-[154px] h-[150px]">
+              <img
+                src="wedding bands mobile.png"
+                alt="Category 2"
+                className="w-full h-full"
+              />
+              <div className="w-[154px] h-[21px] mt-[8px]">
+                <p className="font-montserrat uppercase font-normal text-[12px] leading-[21px] text-center text-[#4A1521]">
+                  Wedding Bands
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Second Row */}
+          <div className="flex justify-between gap-[12px]">
+            {/* Third Image */}
+            <div className="w-[154px] h-[150px]">
+              <img
+                src="men's jewellery mobile.png"
+                alt="Category 3"
+                className="w-full h-full"
+              />
+              <div className="w-[154px] h-[21px] mt-[8px]">
+                <p className="font-montserrat uppercase font-normal text-[12px] leading-[21px] text-center text-[#4A1521]">
+                  Men's Jewellery
+                </p>
+              </div>
+            </div>
+
+            {/* Fourth Image */}
+            <div className="w-[154px] h-[150px]">
+              <img
+                src="jewellery mobile.png"
+                alt="Category 4"
+                className="w-full h-full"
+              />
+              <div className="w-[154px] h-[21px] mt-[8px]">
+                <p className="font-montserrat uppercase font-normal text-[12px] leading-[21px] text-center text-[#4A1521]">
+                  Jewellery
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Third Row */}
+          <div className="flex justify-between gap-[12px]">
+            {/* Fifth Image */}
+            <div className="w-[154px] h-[150px]">
+              <img src="gifts mobile.png" alt="Category 5" className="w-full h-full" />
+              <div className="w-[154px] h-[21px] mt-[8px]">
+                <p className="font-montserrat uppercase font-normal text-[12px] leading-[21px] text-center text-[#4A1521]">
+                  Gifts
+                </p>
+              </div>
+            </div>
+
+            {/* Video Block */}
+            <div className="w-[154px] h-[179px] bg-[#4A1521]">
+              <video
+                alt="Category 6 Video"
+                className="w-[138px] h-[97px] mx-[8px]"
+                autoPlay
+                muted
+                loop
+              >
+                <source src="design your own unique diamond jewellery mobile.mp4" type="video/mp4" />
+              </video>
+              <div className="w-[138px] h-[54px] mb-[14.5px] mx-[8px] text-white font-montserrat font-normal text-[12px] leading-[8px]">
+                <p>Design Your Own</p>
+                <p>Unique Diamond</p>
+                <p>Jewellery</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       {/* Design your Own Unique Jewellery for larger screens */}
 
       <div className="w-full hidden md:flex 2xl:max-w-[1330px] xl:max-w-[1220px] h-[400px] mt-[96px] xl:mx-[30px] 2xl:mx-[35px] 2xl:px-[30px] relative">
@@ -1001,11 +1125,11 @@ export default function Home() {
 
       {/* Featured Collection Lab Grown Component for Larger Screens */}
 
-      <div className="w-full hidden max-w-[1380px] h-[40px] mt-[96px] xl:mx-[30px] 2xl:mx-[60px] md:flex font-montserrat text-[36px] font-semibold">
+      <div className="w-full hidden max-w-[1380px] h-[40px] mt-[96px] xl:mx-[30px] 2xl:mx-[60px] md:flex font-montserrat text-[36px] font-semibold" style={{ overflow: 'hidden' }}>
         Featured Collection: Our Lab Grown
       </div>
 
-      <div className="relative hidden md:flex max-w-[1380px] mt-[36px] xl:mx-[30px] 2xl:mx-[60px]">
+      <div className="relative hidden md:flex max-w-[1380px] mt-[36px] xl:mx-[30px] 2xl:mx-[60px]" style={{ overflow: 'hidden' }}>
         {/* Image Row */}
         <div className="flex overflow-hidden">
           <div className="flex gap-[20px] transition-transform duration-500 ease-in-out" id="image-row">
