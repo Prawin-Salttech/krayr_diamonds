@@ -421,7 +421,7 @@ export default function Home() {
 
         {/* Larger Screen Component (For Laptops and Desktops) */}
         <div className="hidden md:block w-full relative h-[10vh] text-left text-sm text-black font-montserrat" style={{ overflow: 'hidden' }}>
-          <div className="w-full h-full flex flex-col justify-between items-center 2xl:px-[259px] pt-[20px] xl:px-[131px]">
+          <div className="h-full flex flex-col justify-between items-center 2xl:px-[259px] pt-[20px] xl:px-[131px]">
             <div className="w-full max-w-[1536px] flex flex-row items-center justify-start gap-[48px]">
               <div className="leading-[1.25rem] uppercase font-medium whitespace-nowrap">Engagement Rings</div>
               <div className="leading-[1.25rem] uppercase font-medium whitespace-nowrap">Wedding Bands</div>
@@ -526,7 +526,7 @@ export default function Home() {
       {/* Shop Diamonds by Shape Component for larger screens*/}
 
       <div className="hidden w-full md:flex justify-center mt-[80px]">
-        <div className="relative w-[1280px] h-[214px] px-[80px] flex flex-col items-start gap-[36px] text-center text-[36px] text-gray font-montserrat">
+        <div className="relative w-[1280px] h-[214px] px-[80px] flex flex-col items-start gap-[36px] text-center text-[36px] text-gray font-montserrat overflow-x-hidden">
 
           <div className="self-stretch relative leading-[40px] font-semibold">
             Shop Diamonds by Shape
@@ -924,7 +924,7 @@ export default function Home() {
         Shop by Category
       </div>
 
-      <div className="w-full hidden md:block dynamic-px mt-[35px]">
+      <div className="hidden md:block dynamic-px mt-[35px]">
         <div className="flex gap-[20px] xl:max-w-[calc(447px*3+20px*2)] mx-auto">
 
           <div className="w-[447px]">
@@ -951,7 +951,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full hidden md:block dynamic-px mt-[32px]">
+      <div className="hidden md:block dynamic-px mt-[32px]">
         <div className="flex gap-[20px] xl:max-w-[calc(447px*3+20px*2)] mx-auto">
 
           <div className="w-[447px]">
@@ -982,18 +982,18 @@ export default function Home() {
 
       {/* Shop Diamonds by category for Mobile Screens */}
 
-      <div className="mt-[44px] block md:hidden mx-[20px] max-w-[414px]">
+      <div className="mt-[44px] block md:hidden px-[5vw] w-full mx-auto h-auto max-w-[414px]">
         {/* Shop by Category Title */}
-        <div className="w-[320px] h-[30px] mb-[32px]">
+        <div className="w-full h-[30px] mb-[32px]">
           <p className="font-montserrat font-semibold text-[24px] leading-[30px] text-center">
             Shop by Category
           </p>
         </div>
 
         {/* Container with Flexbox and Gap for Spacing */}
-        <div className="flex flex-col gap-y-[50px]">
+        <div className="flex flex-col gap-y-[50px] w-full">
           {/* First Row */}
-          <div className="flex justify-between gap-[10px]">
+          <div className="flex gap-x-[3vw]">
             {/* First Image */}
             <div className="w-[154px] h-[150px]">
               <img
@@ -1024,7 +1024,7 @@ export default function Home() {
           </div>
 
           {/* Second Row */}
-          <div className="flex justify-between gap-[12px]">
+          <div className="flex gap-x-[3vw]">
             {/* Third Image */}
             <div className="w-[154px] h-[150px]">
               <img
@@ -1055,7 +1055,7 @@ export default function Home() {
           </div>
 
           {/* Third Row */}
-          <div className="flex justify-between gap-[12px]">
+          <div className="flex gap-x-[12px]">
             {/* Fifth Image */}
             <div className="w-[154px] h-[150px]">
               <img src="gifts mobile.png" alt="Category 5" className="w-full h-full" />
@@ -1125,7 +1125,7 @@ export default function Home() {
 
       {/* Featured Collection Lab Grown Component for Larger Screens */}
 
-      <div className="w-full hidden max-w-[1380px] h-[40px] mt-[96px] xl:mx-[30px] 2xl:mx-[60px] md:flex font-montserrat text-[36px] font-semibold" style={{ overflow: 'hidden' }}>
+      <div className="hidden max-w-[1380px] h-[40px] mt-[96px] xl:mx-[30px] 2xl:mx-[60px] md:flex font-montserrat text-[36px] font-semibold" style={{ overflow: 'hidden' }}>
         Featured Collection: Our Lab Grown
       </div>
 
@@ -1527,7 +1527,7 @@ export default function Home() {
           </div>
 
           {/* Footer Content - Fourth Container */}
-          <div className="w-[1280px] h-[528px] mt-[64px] mb-[18px] mx-[80px] relative z-20">
+          <div className="xl:w-[1000px] 2xl:w-[1280px] h-[528px] mt-[64px] mb-[18px] mx-[80px] relative z-20">
             {/* Brand Logo */}
 
 
