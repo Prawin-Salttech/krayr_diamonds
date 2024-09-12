@@ -982,7 +982,7 @@ export default function Home() {
 
       {/* Shop Diamonds by category for Mobile Screens */}
 
-      <div className="mt-[44px] block md:hidden px-[5vw] w-full mx-auto h-auto max-w-[414px]">
+      <div className="mt-[44px] block md:hidden px-[5vw] w-full h-auto max-w-[414px]">
         {/* Shop by Category Title */}
         <div className="w-full h-[30px] mb-[32px]">
           <p className="font-montserrat font-semibold text-[24px] leading-[30px] text-center">
@@ -1123,6 +1123,49 @@ export default function Home() {
       </div>
 
 
+
+      {/* Design your Own Unique jewellery for mobile screens */}
+
+
+      <div className="w-full max-w-[320px] block md:hidden mx-auto mt-[56px] px-[20px]">
+        {/* Background Image Container */}
+        <div className="w-full h-[245px] bg-cover bg-center mx-auto" style={{ backgroundImage: "url('design your own unique jewellery mobile.png')" }}></div>
+
+        {/* Top-Level Container */}
+        <div className="w-full max-w-[320px] h-[260px]  bg-[#F3EFE6] mx-auto -mt-[245px] relative">
+          {/* First Text Container */}
+          <div className="w-full max-w-[280px] h-[64px] mx-auto text-center mt-[230px]">
+            <p className="font-montserrat font-semibold text-[24px] leading-[32px]">
+              Design Your Own Unique Jewellery
+            </p>
+          </div>
+
+          {/* Gap between first and second text container */}
+          <div className="h-[16px]"></div>
+
+          {/* Second Text Container */}
+          <div className="w-full max-w-[280px] h-[60px] mx-auto text-center mt-[16px]">
+            <p className="font-montserrat font-medium text-[14px] leading-[20px]">
+              Krayr designs feature textural details, unique petal motifs, and delicate
+              diamond leaves.
+            </p>
+          </div>
+
+          {/* Gap between second text container and button */}
+          <div className="h-[24px]"></div>
+
+          {/* Button */}
+          <button className="w-full max-w-[280px] h-[44px] mx-[20px] font-semibold bg-white text-black hover:bg-black hover:text-white font-montserrat text-[14px]">
+            Create My Unique Piece
+          </button>
+
+          {/* Bottom Gap */}
+          <div className="h-[30px]"></div>
+        </div>
+      </div>
+
+
+
       {/* Featured Collection Lab Grown Component for Larger Screens */}
 
       <div className="hidden max-w-[1380px] h-[40px] mt-[96px] xl:mx-[30px] 2xl:mx-[60px] md:flex font-montserrat text-[36px] font-semibold" style={{ overflow: 'hidden' }}>
@@ -1183,6 +1226,53 @@ export default function Home() {
 
       </div>
 
+
+      {/* Featured Collection Lab grown for mobile screens */}
+
+
+      <div className="w-full max-w-[320px] h-[314px] block md:hidden mx-auto mt-[56px] px-[20px]">
+        {/* Text Container */}
+        <div className="w-full h-[64px] text-center">
+          <p className="font-montserrat font-semibold text-[24px] leading-[32px]">
+            Featured Collection: Our Lab Grown
+          </p>
+        </div>
+
+        {/* Gap between text container and images */}
+        <div className="h-[24px]"></div>
+
+        {/* Image Row Container */}
+        <div className="overflow-x-scroll flex space-x-[12px] scrollbar-hidden">
+          {/* First Image and Text Container */}
+          <div className="flex-shrink-0 w-[202px] h-[226px] relative">
+            <img
+              src="featured collection lab grown 1 mobile.png"
+              alt="Image 1"
+              className="w-full h-[202px] object-cover"
+            />
+            <div className="absolute bottom-0 left-0 w-full h-[16px] bg-white">
+              <p className="font-montserrat uppercase font-normal text-[#4A1521] text-[12px] leading-[16px] text-center">
+                Engagement Rings
+              </p>
+            </div>
+          </div>
+
+          {/* Second Image and Text Container */}
+          <div className="flex-shrink-0 w-[202px] h-[226px] relative">
+            <img
+              src="featured collection lab grown 2 mobile.png"
+              alt="Image 2"
+              className="w-full h-[202px] object-cover"
+            />
+            <div className="absolute bottom-0 left-0 w-full h-[16px] bg-white">
+              <p className="font-montserrat uppercase font-normal text-[#4A1521] text-[12px] leading-[16px] text-center">
+                Wedding Bands
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Diamonds that Embody both sustainability and style for larger screens */}
 
       <div className="relative hidden md:flex max-w-[1380px] h-[422px] mt-[96px] xl:mx-[30px] 2xl:mx-[66px] 2xl:px-[30px] bg-cover" style={{ backgroundImage: `url('/diamonds that embody both sustainability and style.png')` }}>
@@ -1235,6 +1325,106 @@ export default function Home() {
         </div>
       </div>
 
+
+      {/* Diamonds that Embody Sustainability and Style for smaller Screens */}
+
+
+
+
+      <div className="relative w-[320px] h-[460px] mx-auto mt-[56px] mb-[30px] block md:hidden">
+        {/* Background Image Div */}
+        <div
+          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          style={{ backgroundImage: "url('diamonds that embody sustainability and shine mobile bg.png')" }}
+        ></div>
+
+        {/* Content Overlay */}
+        <div className="relative z-10 px-[20px] flex flex-col h-full">
+          <div className="w-[280px] h-[120px] pt-[28px]">
+            <p className="font-montserrat font-semibold text-[24px] leading-[30px] text-white">
+              Diamonds That <br />
+              Embody Both <br />
+              Sustainability and <br />
+              Style
+            </p>
+          </div>
+
+          <div className="pt-[45px]">
+            <button
+              className="w-[280px] h-[45px] relative bg-white outline-none flex flex-row items-center justify-center py-3 px-0 text-left text-[16px] text-gray font-montserrat font-semibold hover:bg-opacity-0 hover:bg-transparent hover:text-white transition-all duration-300 border hover:border-white"
+              type="button" // or "submit" if it's in a form
+              style={{
+                border: '1px solid white',
+              }}
+            >
+              <span className="relative leading-[24px]">
+                Shop Sustainable Rings
+              </span>
+            </button>
+          </div>
+
+          <div className="flex flex-col items-start gap-[2px] pt-[20px]">
+            {/* Logos and Texts */}
+            <div className="flex items-center gap-[12px]">
+              <div className="relative w-[28px] h-[29px]">
+                <img src="Group 25.svg" alt="Logo 1 Layer 1" className="w-full h-full" />
+                <img
+                  src="Layer_1.svg"
+                  alt="Logo 1 Layer 2"
+                  className="w-[16px] h-[16px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                />
+              </div>
+              <div className="w-[240px]">
+                <p className="font-montserrat font-medium text-[14px] leading-[15px] text-white">Conflict-Free</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-[12px]">
+              <div className="relative w-[28px] h-[29px]">
+                <img src="Group 26.svg" alt="Logo 2 Layer 1" className="w-full h-full" />
+                <img
+                  src="Capa_1 mobile.svg"
+                  alt="Logo 2 Layer 2"
+                  className="w-[14px] h-[14px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                />
+              </div>
+              <div className="w-[207px]">
+                <p className="font-montserrat font-medium text-[14px] leading-[15px] text-white">Fair Labor Practices</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-[12px]">
+              <div className="relative w-[28px] h-[29px]">
+                <img src="Group 27.svg" alt="Logo 3 Layer 1" className="w-full h-full" />
+                <img
+                  src="mobile 3rd logo.svg"
+                  alt="Logo 3 Layer 2"
+                  className="w-[14px] h-[14px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                />
+              </div>
+              <div className="w-[235px]">
+                <p className="font-montserrat font-medium text-[14px] leading-[15px] text-white">Reduced Environmental Impact</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-[12px]">
+              <div className="relative w-[28px] h-[29px]">
+                <img src="Group 28.svg" alt="Logo 4 Layer 1" className="w-full h-full" />
+                <img
+                  src="4th logo mobile.svg"
+                  alt="Logo 4 Layer 2"
+                  className="w-[14px] h-[15px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                />
+              </div>
+              <div className="w-[240px]">
+                <p className="font-montserrat font-medium text-[14px] leading-[15px] text-white">Certified Sustainability</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       {/* The Hoop Shop and Essential Edit for Larger Screens */}
 
       <div className="flex-col hidden md:flex xl:flex-row xl:justify-center gap-[20px] mt-[96px] xl:px-[30px] 2xl:px-[30px]">
@@ -1285,6 +1475,92 @@ export default function Home() {
         </div>
       </div>
 
+
+
+      {/* The Hoop Shop and Essential edits for Mobile screens */}
+
+      <div className="block md:hidden w-[321px] h-[364px] mx-auto mt-[56px] px-[20px]">
+        {/* Image Container */}
+        <div className="w-[320px] h-[229px]">
+          <img
+            src="hoop shop mobile.png"
+            alt="Image description"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Gap below the image */}
+        <div className="h-[16px]"></div>
+
+        {/* First Text Container */}
+        <div className="w-[320px] h-[30px] text-center">
+          <p className="font-montserrat font-semibold text-[24px] leading-[30px]">
+            The Hoop Shop
+          </p>
+        </div>
+
+        {/* Gap below the first text */}
+        <div className="h-[10px]"></div>
+
+        {/* Second Text Container */}
+        <div className="w-[320px] h-[18px] text-center">
+          <p className="font-montserrat font-medium text-[12px] text-gray-200 leading-[18px]">
+            Your one-stop-shop for perfectly proportioned pairs.
+          </p>
+        </div>
+
+        {/* Gap below the second text */}
+        <div className="h-[16px]"></div>
+
+        {/* Button */}
+        <button className="w-[320px] h-[45px] bg-palevioletred text-white font-semibold font-montserrat hover:bg-fadedpalevioletred active:bg-fadedpalevioletred transition ease-in-out duration-200">
+          Shop Now
+        </button>
+      </div>
+
+
+
+      <div className="block md:hidden w-[320px] h-[382px] mx-auto mt-[85px] px-[20px]">
+        {/* Image Container */}
+        <div className="w-[320px] h-[229px]">
+          <img
+            src="the essential edits mobile.png"
+            alt="Image description"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Gap below the image */}
+        <div className="h-[14.98px]"></div>
+
+        {/* First Text Container */}
+        <div className="w-[320px] h-[30px] text-center">
+          <p className="font-montserrat font-semibold text-[24px] leading-[30px]">
+            The Essentials Edit
+          </p>
+        </div>
+
+        {/* Gap below the first text */}
+        <div className="h-[10px]"></div>
+
+        {/* Second Text Container */}
+        <div className="w-[320px] h-[36px] text-center">
+          <p className="font-montserrat font-medium text-[12px] text-gray-200 leading-[18px]">
+            Signature pieces to swear by. Your jewellery capsule
+            starts here.
+          </p>
+        </div>
+
+        {/* Gap below the second text */}
+        <div className="h-[16px]"></div>
+
+        {/* Button */}
+        <button className="w-[320px] h-[45px] bg-palevioletred text-white font-semibold font-montserrat hover:bg-fadedpalevioletred active:bg-fadedpalevioletred transition ease-in-out duration-200">
+          Shop Now
+        </button>
+      </div>
+
+
       {/* Krayr Collection for larger screens */}
 
       <div className="w-full hidden md:flex 2xl:max-w-[1330px] mt-[126px] xl:max-w-[1220px] h-[400px] xl:mx-[30px] 2xl:mx-[35px] 2xl:px-[30px] relative">
@@ -1299,10 +1575,52 @@ export default function Home() {
             <p className="m-0">Krayr designs feature textural details, unique petal</p>
             <p className="m-0">motifs, and delicate diamond leaves.</p>
           </div>
-          <button className="w-[316px] h-[48px] font-semibold text-[16px] font-montserrat leading-[24px] text-black bg-white hover:text-white hover:bg-black">
+          <button className="w-[316px] h-[48px] font-semibold text-[16px]  font-montserrat leading-[24px] text-black bg-white hover:text-white hover:bg-black">
 
             Shop Krayr Collection Now
           </button>
+        </div>
+      </div>
+
+
+      {/* Krayr collection for Mobile screens */}
+
+
+      <div className="block md:hidden w-[320px] h-[398px] mt-[56px] pt-[20px] mx-auto px-[20px] mb-[20px] relative">
+        {/* First Image */}
+        <div className="relative">
+          <div className="w-[320px] h-[296px] bg-cover bg-center"
+            style={{ backgroundImage: "url('krayr collection mobile layer 1.png')" }}>
+          </div>
+
+          {/* Second Image Layer with overlap */}
+          <div className="absolute top-[130px] w-[320px] h-[268px] bg-cover bg-center"
+            style={{ backgroundImage: "url('krayr collection mobile layer 2.png')" }}>
+          </div>
+        </div>
+
+        {/* First Text Container */}
+        <div className="absolute top-[28px] w-full z-10">
+          <div className="w-[280px] h-[40px] mx-[20px]">
+            <p className="font-montserrat font-semibold text-[24px] text-black leading-[40px]">
+              Krayr Collection
+            </p>
+          </div>
+
+          {/* Second Text Container */}
+          <div className="w-[280px] h-[36px] mt-[12px] mx-[20px]">
+            <p className="font-montserrat font-medium text-[12px] text-gray-200 leading-[18px]">
+              Krayr designs feature textural details, unique
+              petal motifs, and delicate diamond leaves.
+            </p>
+          </div>
+
+          {/* Button */}
+          <div className="mt-[24px] mx-auto px-[20px]">
+            <button className="w-[232px] h-[45px] bg-white text-black font-bold font-montserrat transition duration-300 hover:bg-black hover:text-white">
+              Shop Krayr Collection Now
+            </button>
+          </div>
         </div>
       </div>
 
@@ -1395,6 +1713,84 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Krayr Love Notes Component for Mobile Screens */}
+
+      <div className="block md:hidden w-[320px] mt-[56px] mx-auto px-[20px]">
+        {/* First Text Container */}
+        <div className="w-[320px] h-[30px]">
+          <p className="font-montserrat font-semibold text-[24px] leading-[30px] text-center">
+            Krayr Love Notes
+          </p>
+        </div>
+
+        {/* Second Text Container */}
+        <div className="w-[320px] h-auto mt-[10px]">
+          <p className="font-montserrat font-medium text-[14px] text-gray-200 leading-[21px] text-center">
+            Craft custom jewellery that reflects your
+            style and personality. We'll help you create a
+            truly special piece.
+          </p>
+        </div>
+
+        {/* Gap of 32px */}
+        <div className="h-[32px]"></div>
+
+        {/* Row of Images */}
+        <div className="flex justify-between">
+          <div>
+            <img src="krayr love notes mobile 1.png" alt="Image 1" className="w-[154px] h-[150px]" />
+            <div className="w-[154px] h-auto mt-[12px]">
+              <p className="font-montserrat font-medium text-[10px] text-gray-200 leading-[21px]">
+                "Finding the perfect diamond
+                was effortless with Krayr.
+                Their extensive selection,
+                from classic styles to vibrant
+                colored lab diamonds,
+                provides endless options."
+              </p>
+            </div>
+            <div className="w-[154px] h-[15px] mt-auto">
+              <p className="font-montserrat font-medium text-[10px] text-gray-200 leading-[15px]">
+                - Amir Mansour
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <img src="krayr love notes mobile 2.png" alt="Image 2" className="w-[154px] h-[150px]" />
+            <div className="w-[154px] h-auto mt-[12px]">
+              <p className="font-montserrat font-medium text-[10px] text-gray-200 leading-[21px]">
+                "Krayr stands out with its vast
+                array of diamond options.
+                With numerous styles, carat
+                sizes, cuts, and colors to
+                choose from, their Lab
+                Diamonds and Lab Created
+                Colored Diamonds are the
+                best I've seen in the market"
+              </p>
+            </div>
+            <div className="w-[154px] h-[15px] mt-[12px]">
+              <p className="font-montserrat font-medium text-[10px] text-gray-200 leading-[15px]">
+                - Amanda Rose
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Gap of 24px */}
+        <div className="h-[24px]"></div>
+
+        {/* Button */}
+        <div className="w-[320px] h-[45px] mx-auto">
+          <button className="w-full h-full bg-palevioletred text-white font-bold font-montserrat transition duration-300 hover:bg-palevioletred/80">
+            View all Reviews
+          </button>
+        </div>
+      </div>
+
+
+
       {/* Get Inspired and shop Instagram component for Larger screens */}
 
 
@@ -1455,6 +1851,51 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Get Inspired and shop Instagram component for Mobile screens */}
+
+
+      <div className="block md:hidden w-[320px] h-[229px] mt-[35px] px-[20px] py-[24px] relative">
+
+        <div className=" bg-maroon">
+          {/* First Text Container */}
+          <div className="mx-auto w-[152px]">
+            <p className="font-montserrat font-semibold text-[15px] pt-[12px] text-white leading-[30px] text-center">
+              Get Inspired
+            </p>
+          </div>
+
+          {/* Gap below the text container */}
+          <div className="mt-[18px]"></div>
+
+          {/* Scrollable Row of Images */}
+          <div className="pl-[20px] overflow-x-auto scrollbar-hidden overflow-hidden flex gap-[8px]">
+            <div className="flex-shrink-0 w-[74px] h-[94px] bg-center bg-cover"
+              style={{ backgroundImage: "url('get inspired and shop instagram mobile 1.png')" }}>
+            </div>
+            <div className="flex-shrink-0 w-[74px] h-[94px] bg-center bg-cover"
+              style={{ backgroundImage: "url('get inspired and shop instagram mobile 2.png')" }}>
+            </div>
+            <div className="flex-shrink-0 w-[74px] h-[94px] bg-center bg-cover"
+              style={{ backgroundImage: "url('get inspired and shop instagram mobile 3.png')" }}>
+            </div>
+            <div className="flex-shrink-0 w-[74px] h-[94px] bg-center bg-cover"
+              style={{ backgroundImage: "url('get inspired and shop instagram mobile 4.png')" }}>
+            </div>
+          </div>
+
+          {/* Gap below the scrollable row */}
+          <div className="mt-[18px]"></div>
+
+          {/* Second Text Container */}
+          <div className="mx-auto w-[115px] pb-[20px]">
+            <p className="font-montserrat font-semibold text-[12px] text-white leading-[12px] underline text-center">
+              Shop Instagram
+            </p>
+          </div>
+        </div>
+      </div>
+
+
       {/* Krayr collection 2 for larger screens */}
 
       <div className="w-full hidden md:flex  mt-[126px] h-[400px] relative">
@@ -1472,6 +1913,33 @@ export default function Home() {
           <WhiteButtonPrimary className="w-[316px] h-[48px] text-black">Shop Krayr Collection Now</WhiteButtonPrimary>
         </div>
       </div>
+
+      {/* Krayr collection 2 for Mobile screens */}
+
+      <div className="block md:hidden w-[360px] h-[230px] mt-[40px] pb-[5px] mx-auto relative mb-[20px]">
+        {/* Background Image */}
+        <div className="absolute w-full h-full bg-cover bg-center"
+          style={{ backgroundImage: "url('krayr collection 2 mobile.png')" }}>
+        </div>
+
+        {/* First Text Container */}
+        <div className="absolute top-[160px] left-[16px] pl-[10px] right-[155px] w-[189px] h-[30px]">
+          <p className="font-montserrat font-semibold text-[18px] text-white leading-[30px]">
+            Krayr Jewellery
+          </p>
+        </div>
+
+        {/* Second Text Container */}
+        <div className="absolute top-[194px] left-[16px] pl-[10px] right-[137px] w-[207px] h-[20px]">
+          <p className="font-montserrat font-semibold uppercase text-[12px] underline text-white leading-[20px]">
+            Discover The Collection
+          </p>
+        </div>
+      </div>
+
+
+
+
 
       {/* Join the Krayr Universe component for Larger Screens */}
 
@@ -1503,6 +1971,42 @@ export default function Home() {
           Learn More
         </button>
       </div>
+
+      {/* Join the krayr universe Component for Mobile Screens */}
+
+      <div className="block md:hidden w-[320px] h-[184px] mt-[56px] mb-[20px] mx-auto px-[20px]">
+        {/* First Text Container */}
+        <div className="w-[316px]">
+          <p className="font-montserrat font-semibold text-[22px] leading-[30px] text-black">
+            {/* Add your text content here */}
+            Join The Krayr Movement
+          </p>
+        </div>
+
+        {/* Gap of 10px */}
+        <div className="mt-[10px]"></div>
+
+        {/* Second Text Container */}
+        <div className="w-[320px] h-[72px]">
+          <p className="font-montserrat font-medium text-[16px] leading-[21px] text-gray-200">
+            {/* Add your text content here */}
+            Discover its magnificent icons,
+            personalised services and unique
+            experiences
+          </p>
+        </div>
+
+        {/* Gap of 24px */}
+        <div className="mt-[24px]"></div>
+
+        {/* Button */}
+        <div className="w-[320px] h-[48px]">
+          <button className="w-full h-full bg-palevioletred text-white font-semibold font-montserrat hover:bg-fadedpalevioletred active:bg-fadedpalevioletred transition ease-in-out duration-200 ">
+            Sign Up Now
+          </button>
+        </div>
+      </div>
+
 
       {/* Footer Component for larger screens  */}
 
@@ -1654,6 +2158,125 @@ export default function Home() {
         </div>
 
       </div>
+
+      {/* footer component for mobile screens */}
+
+
+      <div className="w-[360px] block md:hidden h-[612px] mt-[56px] bg-[#F9F6F4] relative">
+
+        <div className="absolute inset-0 w-[386px] h-[569px] bg-cover bg-center"
+          style={{ backgroundImage: "url('footer vector image mobile.png')" }}></div>
+
+
+        <div className="relative p-[16px]">
+
+          <div className="w-[320px] h-[20px] mb-[12px] flex items-center justify-center text-center">
+            <p className="font-montserrat uppercase font-semibold text-[14px] leading-[20px] text-black">
+              contact us
+            </p>
+          </div>
+
+
+          <div className="flex gap-[24px] items-center mb-[16px] px-[100px]">
+
+            <div className="text-center">
+              <div className="w-[26px] h-[26px] bg-cover bg-center"
+                style={{ backgroundImage: "url('final whatsapp mobile logo.png')" }}></div>
+              <p className="mt-[8px] w-[29px] h-[18px] font-montserrat font-medium text-[12px] leading-[18px] text-gray-200">
+                Chat
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-[24px] h-[24px] bg-cover bg-center"
+                style={{ backgroundImage: "url('phone icon mobile footer.svg')" }}></div>
+              <p className="mt-[8px] w-[23px] h-[18px] font-montserrat font-medium text-[12px] leading-[18px] text-gray-200">
+                Call
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-[24px] h-[24px] bg-cover bg-center"
+                style={{ backgroundImage: "url('mail icon mobile footer.svg')" }}></div>
+              <p className="mt-[8px] w-[26px] h-[18px] font-montserrat font-medium text-[12px] leading-[18px] text-gray-200">
+                Mail
+              </p>
+            </div>
+          </div>
+
+
+          <div className="mb-[16px] w-[320px] px-[10px] py-[16px] flex items-center border-b border-b-black">
+            <div className="w-[300px] h-[20px] font-montserrat uppercase font-semibold text-[14px] leading-[20px] text-black">
+              About
+            </div>
+            <div className="w-[20px] h-[20px] bg-cover bg-center ml-auto"
+              style={{ backgroundImage: `url('plus.svg')` }}></div>
+          </div>
+
+          <div className="mb-[16px] w-[320px] px-[10px] py-[16px] flex items-center border-b border-gray-200">
+            <div className="w-[300px] h-[20px] font-montserrat uppercase font-semibold text-[14px] leading-[20px] text-black">
+              Education
+            </div>
+            <div className="w-[20px] h-[20px] bg-cover bg-center ml-auto"
+              style={{ backgroundImage: `url('plus.svg')` }}></div>
+          </div>
+
+          <div className="mb-[16px] w-[320px] px-[10px] py-[16px] flex items-center border-b border-gray-200">
+            <div className="w-[300px] h-[20px] font-montserrat uppercase font-semibold text-[14px] leading-[20px] text-black">
+              Orders
+            </div>
+            <div className="w-[20px] h-[20px] bg-cover bg-center ml-auto"
+              style={{ backgroundImage: `url('plus.svg')` }}></div>
+          </div>
+
+          <div className="mb-[16px] w-[320px] px-[10px] py-[16px] flex items-center border-b border-gray-200">
+            <div className="w-[300px] h-[20px] font-montserrat uppercase font-semibold text-[14px] leading-[20px] text-black">
+              Customer Service
+            </div>
+            <div className="w-[20px] h-[20px] bg-cover bg-center ml-auto"
+              style={{ backgroundImage: `url('plus.svg')` }}></div>
+          </div>
+
+
+          <div className="w-[146px] mb-[10px] px-[10px]">
+            <p className="font-montserrat uppercase font-semibold text-[12px] leading-[18px] text-black">
+              sign up for email
+            </p>
+          </div>
+          <div className="w-[248px] h-[18px] mb-[18px] px-[10px]">
+            <p className="font-montserrat font-medium text-[12px] leading-[18px] text-gray-200">
+              Send me Krayr news, updates and offers.
+            </p>
+          </div>
+
+
+          <div className="w-[320px] flex items-center mb-[24px] px-[10px]">
+            <input type="text" className="w-[240px] h-[40px] px-[12px] border text-gray-200 border-gray-200" placeholder="Your Email Address" />
+            <button className="w-[48px] h-[44px] bg-palevioletred text-white flex items-center justify-center">
+              <img src="/chevron-right.svg" alt="Chevron Right" className="w-[24px] h-[24px]" />
+            </button>
+          </div>
+
+
+          <div className="w-[120px] h-[20px] flex items-center gap-[10px] px-[10px] mb-[14px]">
+            <div className="w-[20px] h-[20px] bg-cover bg-center"
+              style={{ backgroundImage: "url('Instagram.png')" }}></div>
+            <div className="w-[20px] h-[20px] bg-cover bg-center"
+              style={{ backgroundImage: "url('Group.svg')" }}></div>
+            <div className="w-[20px] h-[20px] bg-cover bg-center"
+              style={{ backgroundImage: "url('Facebook.png')" }}></div>
+          </div>
+
+
+          <div className="w-[320px] h-[36px] text-center mb-[9px]">
+            <p className="font-montserrat font-medium text-[12px] leading-[18px] text-gray-200">
+              ©2024 Krayr Diamonds | Terms and Conditions |
+              Privacy Policy
+            </p>
+          </div>
+        </div>
+      </div>
+
 
 
 
