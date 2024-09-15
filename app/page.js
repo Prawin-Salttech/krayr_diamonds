@@ -409,7 +409,7 @@ export default function Home() {
 
         <div className="w-full flex md:hidden justify-center mt-[12px]">
           <img
-            className="w-full h-auto max-w-[414px] max-h-[915px] object-cover"
+            className="w-full h-auto max-h-[915px] object-cover"
             alt="Displayed Image"
             src="Group 61 mobile.png"  // Replace with the actual path to your image
           />
@@ -515,7 +515,7 @@ export default function Home() {
             Shop Engagement Rings
           </button>
           {/* Part 2.2 - Button 2 */}
-          <button className="w-[calc(100%-40px)] h-[45px] border border-black hover:bg-black active:bg-black active:text-white transition ease-in-out duration-200 hover:text-white flex items-center justify-center text-black text-[14px] font-semibold font-montserrat mb-[20px]">
+          <button className="w-[calc(100%-40px)] h-[45px] border border-gray-200 bg-white hover:bg-black active:bg-black active:text-white transition ease-in-out duration-200 hover:text-white flex items-center justify-center text-black text-[14px] font-semibold font-montserrat mb-[20px]">
             Shop Wedding Rings
           </button>
         </div>
@@ -982,41 +982,42 @@ export default function Home() {
 
       {/* Shop Diamonds by category for Mobile Screens */}
 
-      <div className="mt-[44px] block md:hidden px-[5vw] w-full h-auto max-w-[414px]">
+      <div className="mt-[44px] block md:hidden px-[5vw] h-auto " style={{width: `calc(100vw * (320/360))`}}>
         {/* Shop by Category Title */}
-        <div className="w-full h-[30px] mb-[32px]">
-          <p className="font-montserrat font-semibold text-[24px] leading-[30px] text-center">
+        <div className="h-[30px] mb-[32px]">
+          <p className="font-montserrat font-semibold text-[24px] leading-[30px] text-center" style={{width: `calc(100vw * (320/360))`}}>
             Shop by Category
           </p>
         </div>
 
         {/* Container with Flexbox and Gap for Spacing */}
-        <div className="flex flex-col gap-y-[50px] w-full">
+        <div className="flex flex-col items-center justify-center gap-y-[24px]">
           {/* First Row */}
-          <div className="flex gap-x-[3vw]">
+          <div className="flex gap-x-[3vw]"> 
             {/* First Image */}
-            <div className="w-[154px] h-[150px]">
+            <div>
               <img
                 src="engagement rings mobile.png"
                 alt="Category 1"
-                className="w-full h-full"
+                style={{width: `calc(100vw * (154/360))`,height: `calc(100vw * (150 / 360))`}}
               />
-              <div className="w-[154px] h-[21px] mt-[8px]">
-                <p className="font-montserrat uppercase font-normal text-[12px] leading-[21px] text-center text-[#4A1521]">
+              <div className="h-[21px] mt-[8px]">
+                <p className="font-montserrat uppercase font-normal text-[12px] leading-[21px] text-center text-[#4A1521]" style={{height: `calc(100vw * (154/360))`}}>
                   Engagement Rings
                 </p>
               </div>
             </div>
 
             {/* Second Image */}
-            <div className="w-[154px] h-[150px]">
+            <div>
               <img
                 src="wedding bands mobile.png"
                 alt="Category 2"
-                className="w-full h-full"
+                className="w-full h-full" 
+                style={{width: `calc(100vw * (154 / 360))`,height: `calc(100vw * (150 / 360))`}} 
               />
-              <div className="w-[154px] h-[21px] mt-[8px]">
-                <p className="font-montserrat uppercase font-normal text-[12px] leading-[21px] text-center text-[#4A1521]">
+              <div className="h-[21px] mt-[8px]">
+                <p className="font-montserrat uppercase font-normal text-[12px] leading-[21px] text-center text-[#4A1521]" style={{width: `calc(100vw * (154 / 360))`}} >
                   Wedding Bands
                 </p>
               </div>
@@ -1026,28 +1027,30 @@ export default function Home() {
           {/* Second Row */}
           <div className="flex gap-x-[3vw]">
             {/* Third Image */}
-            <div className="w-[154px] h-[150px]">
+            <div>
               <img
                 src="men's jewellery mobile.png"
                 alt="Category 3"
-                className="w-full h-full"
+                className="h-full" 
+                style={{width: `calc(100vw * (154 / 360))`,height: `calc(100vw * (150 / 360))`}} 
               />
-              <div className="w-[154px] h-[21px] mt-[8px]">
-                <p className="font-montserrat uppercase font-normal text-[12px] leading-[21px] text-center text-[#4A1521]">
+              <div className="h-[21px] mt-[8px]">
+                <p className="font-montserrat uppercase font-normal text-[12px] leading-[21px] text-center text-[#4A1521]" style={{width: `calc(100vw * (154 / 360))`}} >
                   Men's Jewellery
                 </p>
               </div>
             </div>
 
             {/* Fourth Image */}
-            <div className="w-[154px] h-[150px]">
+            <div>
               <img
                 src="jewellery mobile.png"
                 alt="Category 4"
-                className="w-full h-full"
+                className="h-full" 
+                style={{width: `calc(100vw * (154 / 360))`,height: `calc(100vw * (150 / 360))`}} 
               />
-              <div className="w-[154px] h-[21px] mt-[8px]">
-                <p className="font-montserrat uppercase font-normal text-[12px] leading-[21px] text-center text-[#4A1521]">
+              <div className="h-[21px] mt-[8px]">
+                <p className="font-montserrat uppercase font-normal text-[12px] leading-[21px] text-center text-[#4A1521]" style={{width: `calc(100vw * (154 / 360))`}} >
                   Jewellery
                 </p>
               </div>
@@ -1057,27 +1060,28 @@ export default function Home() {
           {/* Third Row */}
           <div className="flex gap-x-[12px]">
             {/* Fifth Image */}
-            <div className="w-[154px] h-[150px]">
-              <img src="gifts mobile.png" alt="Category 5" className="w-full h-full" />
-              <div className="w-[154px] h-[21px] mt-[8px]">
-                <p className="font-montserrat uppercase font-normal text-[12px] leading-[21px] text-center text-[#4A1521]">
+            <div>
+              <img src="gifts mobile.png" alt="Category 5" className="h-full" style={{width: `calc(100vw * (154 / 360))`,height: `calc(100vw * (150 / 360))`}}  />
+              <div className="h-[21px] mt-[8px]">
+                <p className="font-montserrat uppercase font-normal text-[12px] leading-[21px] text-center text-[#4A1521]" style={{width: `calc(100vw * (154 / 360))`}} >
                   Gifts
                 </p>
               </div>
             </div>
 
             {/* Video Block */}
-            <div className="w-[154px] h-[179px] bg-[#4A1521]">
+            <div className="bg-[#4A1521]" style={{height: `calc(100vw * (179 / 360))`}}>
               <video
                 alt="Category 6 Video"
-                className="w-[138px] h-[97px] mx-[8px]"
+                className="mx-[8px]"
+                style={{width: `calc(100vw * (138 / 360))`,height: `calc(100vw * (97 / 360))`}} 
                 autoPlay
                 muted
                 loop
               >
                 <source src="design your own unique diamond jewellery mobile.mp4" type="video/mp4" />
               </video>
-              <div className="w-[138px] h-[54px] mb-[14.5px] mx-[8px] text-white font-montserrat font-normal text-[12px] leading-[8px]">
+              <div className="h-[54px] mb-[14.5px] mx-[8px] text-white font-montserrat font-normal text-[12px] leading-[8px]" style={{width: `calc(100vw * (138 / 360))`}} >
                 <p>Design Your Own</p>
                 <p>Unique Diamond</p>
                 <p>Jewellery</p>
@@ -1127,12 +1131,12 @@ export default function Home() {
       {/* Design your Own Unique jewellery for mobile screens */}
 
 
-      <div className="w-full max-w-[320px] block md:hidden mx-auto mt-[56px] px-[20px]">
+      <div className="w-full max-w-[414px] block md:hidden mx-auto mt-[56px] px-[20px]" style={{width: 'calc(100vw * (320 / 360))'}}>
         {/* Background Image Container */}
         <div className="w-full h-[245px] bg-cover bg-center mx-auto" style={{ backgroundImage: "url('design your own unique jewellery mobile.png')" }}></div>
 
         {/* Top-Level Container */}
-        <div className="w-full max-w-[320px] h-[260px]  bg-[#F3EFE6] mx-auto -mt-[245px] relative">
+        <div className="w-full max-w-[414px] h-[260px]  bg-[#F3EFE6] mx-auto -mt-[245px] relative" style={{width: 'calc(100vw * (320 / 360))'}}>
           {/* First Text Container */}
           <div className="w-full max-w-[280px] h-[64px] mx-auto text-center mt-[230px]">
             <p className="font-montserrat font-semibold text-[24px] leading-[32px]">
@@ -1155,7 +1159,7 @@ export default function Home() {
           <div className="h-[24px]"></div>
 
           {/* Button */}
-          <button className="w-full max-w-[280px] h-[44px] mx-[20px] font-semibold bg-white text-black hover:bg-black hover:text-white font-montserrat text-[14px]">
+          <button className="h-[44px] mx-[20px] font-semibold bg-white text-black hover:bg-black hover:text-white font-montserrat text-[14px]" style={{width: `calc(100vw * (280/360))`}}>
             Create My Unique Piece
           </button>
 
@@ -1230,25 +1234,27 @@ export default function Home() {
       {/* Featured Collection Lab grown for mobile screens */}
 
 
-      <div className="w-full max-w-[320px] h-[314px] block md:hidden mx-auto mt-[56px] px-[20px]">
+      <div className="max-w-[414px] h-[314px] block md:hidden mx-auto mt-[56px] px-[20px]" style={{width: `calc(100vw * (320 / 360))`}}>
         {/* Text Container */}
         <div className="w-full h-[64px] text-center">
-          <p className="font-montserrat font-semibold text-[24px] leading-[32px]">
-            Featured Collection: Our Lab Grown
-          </p>
+          <div className="font-montserrat font-semibold text-[24px] leading-[16px]">
+            <p>Featured Collection: Our</p>
+            <p>Lab Grown</p>
+          </div>
         </div>
 
         {/* Gap between text container and images */}
         <div className="h-[24px]"></div>
 
         {/* Image Row Container */}
-        <div className="overflow-x-scroll flex space-x-[12px] scrollbar-hidden">
+        <div className="overflow-x-scroll flex scrollbar-hidden"style={{gap: `calc(2vw + 10px)`, display: `flex`}}>
           {/* First Image and Text Container */}
-          <div className="flex-shrink-0 w-[202px] h-[226px] relative">
+          <div className="flex-shrink-0 h-[226px] relative">
             <img
               src="featured collection lab grown 1 mobile.png"
               alt="Image 1"
-              className="w-full h-[202px] object-cover"
+              className="h-[192px] object-cover"
+              style={{width: `calc(100vw * (202 / 360))`}}
             />
             <div className="absolute bottom-0 left-0 w-full h-[16px] bg-white">
               <p className="font-montserrat uppercase font-normal text-[#4A1521] text-[12px] leading-[16px] text-center">
@@ -1258,11 +1264,12 @@ export default function Home() {
           </div>
 
           {/* Second Image and Text Container */}
-          <div className="flex-shrink-0 w-[202px] h-[226px] relative">
+          <div className="flex-shrink-0 h-[226px] relative">
             <img
               src="featured collection lab grown 2 mobile.png"
               alt="Image 2"
-              className="w-full h-[202px] object-cover"
+              className="h-[192px] object-cover"
+              style={{width: `calc(100vw * (202 / 360))`}}
             />
             <div className="absolute bottom-0 left-0 w-full h-[16px] bg-white">
               <p className="font-montserrat uppercase font-normal text-[#4A1521] text-[12px] leading-[16px] text-center">
@@ -1331,7 +1338,7 @@ export default function Home() {
 
 
 
-      <div className="relative w-[320px] h-[460px] mx-auto mt-[56px] mb-[30px] block md:hidden">
+      <div className="relative h-[460px] max-w-[414px] mx-auto mt-[56px] mb-[30px] block md:hidden" style={{width: 'calc(100vw * (320 / 360))'}}>
         {/* Background Image Div */}
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center"
@@ -1351,10 +1358,11 @@ export default function Home() {
 
           <div className="pt-[45px]">
             <button
-              className="w-[280px] h-[45px] relative bg-white outline-none flex flex-row items-center justify-center py-3 px-0 text-left text-[16px] text-gray font-montserrat font-semibold hover:bg-opacity-0 hover:bg-transparent hover:text-white transition-all duration-300 border hover:border-white"
+              className="h-[45px] relative bg-white outline-none flex flex-row items-center justify-center py-3 px-0 text-left text-[16px] text-gray font-montserrat font-semibold hover:bg-opacity-0 hover:bg-transparent hover:text-white transition-all duration-300 border hover:border-white"
               type="button" // or "submit" if it's in a form
               style={{
                 border: '1px solid white',
+                width: `calc(100vw *(280/360))`
               }}
             >
               <span className="relative leading-[24px]">
@@ -1479,13 +1487,14 @@ export default function Home() {
 
       {/* The Hoop Shop and Essential edits for Mobile screens */}
 
-      <div className="block md:hidden w-[321px] h-[364px] mx-auto mt-[56px] px-[20px]">
+      <div className="block md:hidden h-[364px] mx-auto mt-[56px] px-[20px]">
         {/* Image Container */}
         <div className="w-[320px] h-[229px]">
           <img
             src="hoop shop mobile.png"
             alt="Image description"
-            className="w-full h-full object-cover"
+            className="h-full object-cover"
+            style={{width: 'calc(100vw * (320 / 360))'}}
           />
         </div>
 
@@ -1493,7 +1502,7 @@ export default function Home() {
         <div className="h-[16px]"></div>
 
         {/* First Text Container */}
-        <div className="w-[320px] h-[30px] text-center">
+        <div className="h-[30px] text-center" style={{width: 'calc(100vw * (320 / 360))'}}>
           <p className="font-montserrat font-semibold text-[24px] leading-[30px]">
             The Hoop Shop
           </p>
@@ -1503,8 +1512,8 @@ export default function Home() {
         <div className="h-[10px]"></div>
 
         {/* Second Text Container */}
-        <div className="w-[320px] h-[18px] text-center">
-          <p className="font-montserrat font-medium text-[12px] text-gray-200 leading-[18px]">
+        <div className="h-[18px] text-center">
+          <p className="font-montserrat font-medium text-[12px] text-gray-200 leading-[18px]" style={{width: 'calc(100vw * (320 / 360))'}}>
             Your one-stop-shop for perfectly proportioned pairs.
           </p>
         </div>
@@ -1513,20 +1522,22 @@ export default function Home() {
         <div className="h-[16px]"></div>
 
         {/* Button */}
-        <button className="w-[320px] h-[45px] bg-palevioletred text-white font-semibold font-montserrat hover:bg-fadedpalevioletred active:bg-fadedpalevioletred transition ease-in-out duration-200">
+        <button className="h-[45px] bg-palevioletred text-white font-semibold font-montserrat hover:bg-fadedpalevioletred active:bg-fadedpalevioletred transition ease-in-out duration-200" style={{width: 'calc(100vw * (320 / 360))'}}>
           Shop Now
         </button>
       </div>
 
 
 
-      <div className="block md:hidden w-[320px] h-[382px] mx-auto mt-[85px] px-[20px]">
+      <div className="block md:hidden h-[382px] mx-auto mt-[85px] px-[20px]">
         {/* Image Container */}
-        <div className="w-[320px] h-[229px]">
+        <div className="h-[229px]">
           <img
             src="the essential edits mobile.png"
             alt="Image description"
             className="w-full h-full object-cover"
+            style={{width: 'calc(100vw * (320 / 360))'}}
+            
           />
         </div>
 
@@ -1534,8 +1545,8 @@ export default function Home() {
         <div className="h-[14.98px]"></div>
 
         {/* First Text Container */}
-        <div className="w-[320px] h-[30px] text-center">
-          <p className="font-montserrat font-semibold text-[24px] leading-[30px]">
+        <div className="h-[30px] text-center">
+          <p className="font-montserrat font-semibold text-[24px] leading-[30px]" style={{width: 'calc(100vw * (320 / 360))'}}>
             The Essentials Edit
           </p>
         </div>
@@ -1544,8 +1555,8 @@ export default function Home() {
         <div className="h-[10px]"></div>
 
         {/* Second Text Container */}
-        <div className="w-[320px] h-[36px] text-center">
-          <p className="font-montserrat font-medium text-[12px] text-gray-200 leading-[18px]">
+        <div className="h-[36px] text-center">
+          <p className="font-montserrat font-medium text-[12px] text-gray-200 leading-[18px]" style={{width: 'calc(100vw * (320 / 360))'}}>
             Signature pieces to swear by. Your jewellery capsule
             starts here.
           </p>
@@ -1555,7 +1566,7 @@ export default function Home() {
         <div className="h-[16px]"></div>
 
         {/* Button */}
-        <button className="w-[320px] h-[45px] bg-palevioletred text-white font-semibold font-montserrat hover:bg-fadedpalevioletred active:bg-fadedpalevioletred transition ease-in-out duration-200">
+        <button className="h-[45px] bg-palevioletred text-white font-semibold font-montserrat hover:bg-fadedpalevioletred active:bg-fadedpalevioletred transition ease-in-out duration-200" style={{width: 'calc(100vw * (320 / 360))'}}>
           Shop Now
         </button>
       </div>
@@ -1586,38 +1597,38 @@ export default function Home() {
       {/* Krayr collection for Mobile screens */}
 
 
-      <div className="block md:hidden w-[320px] h-[398px] mt-[56px] pt-[20px] mx-auto px-[20px] mb-[20px] relative">
+      <div className="block md:hidden h-[398px] mt-[56px] pt-[20px] mx-auto px-[20px] mb-[20px] relative" style={{width: `calc(100vw * (320/360))`}}>
         {/* First Image */}
         <div className="relative">
-          <div className="w-[320px] h-[296px] bg-cover bg-center"
-            style={{ backgroundImage: "url('krayr collection mobile layer 1.png')" }}>
+          <div className="h-[296px] bg-cover bg-center"
+            style={{ backgroundImage: "url('krayr collection mobile layer 1.png')",width: `calc(100vw * (320/360))`}}>
           </div>
 
           {/* Second Image Layer with overlap */}
-          <div className="absolute top-[130px] w-[320px] h-[268px] bg-cover bg-center"
-            style={{ backgroundImage: "url('krayr collection mobile layer 2.png')" }}>
+          <div className="absolute top-[130px] h-[268px] bg-cover bg-center"
+            style={{ backgroundImage: "url('krayr collection mobile layer 2.png')",width: `calc(100vw * (320/360))`}}>
           </div>
         </div>
 
         {/* First Text Container */}
         <div className="absolute top-[28px] w-full z-10">
-          <div className="w-[280px] h-[40px] mx-[20px]">
-            <p className="font-montserrat font-semibold text-[24px] text-black leading-[40px]">
+          <div className="h-[40px] mx-[20px]">
+            <p className="font-montserrat font-semibold text-[24px] text-black leading-[40px]" style={{width: `calc(100vw * (280/360))`}}>
               Krayr Collection
             </p>
           </div>
 
           {/* Second Text Container */}
-          <div className="w-[280px] h-[36px] mt-[12px] mx-[20px]">
-            <p className="font-montserrat font-medium text-[12px] text-gray-200 leading-[18px]">
-              Krayr designs feature textural details, unique
-              petal motifs, and delicate diamond leaves.
-            </p>
+          <div className="mt-[12px] mx-[20px]">
+            <div className="font-montserrat font-medium text-[12px] text-gray-200 leading-[10px]" style={{width: `calc(100vw * (280/360))`}}>
+              <p>Krayr designs feature textural details, unique</p>
+              <p>petal motifs, and delicate diamond leaves.</p>
+            </div>
           </div>
 
           {/* Button */}
           <div className="mt-[24px] mx-auto px-[20px]">
-            <button className="w-[232px] h-[45px] bg-white text-black font-bold font-montserrat transition duration-300 hover:bg-black hover:text-white">
+            <button className="h-[45px] bg-white text-black font-bold font-montserrat transition duration-300 hover:bg-black hover:text-white" style={{width: `calc(100vw * (232/360))`}}>
               Shop Krayr Collection Now
             </button>
           </div>
@@ -1715,21 +1726,21 @@ export default function Home() {
 
       {/* Krayr Love Notes Component for Mobile Screens */}
 
-      <div className="block md:hidden w-[320px] mt-[56px] mx-auto px-[20px]">
+      <div className="block md:hidden mt-[56px] mx-auto px-[20px]" style={{width: 'calc(100vw * (320 / 360))'}}>
         {/* First Text Container */}
-        <div className="w-[320px] h-[30px]">
-          <p className="font-montserrat font-semibold text-[24px] leading-[30px] text-center">
+        <div className="h-[30px]">
+          <p className="font-montserrat font-semibold text-[24px] leading-[30px] text-center" style={{width: 'calc(100vw * (320 / 360))'}}>
             Krayr Love Notes
           </p>
         </div>
 
         {/* Second Text Container */}
-        <div className="w-[320px] h-auto mt-[10px]">
-          <p className="font-montserrat font-medium text-[14px] text-gray-200 leading-[21px] text-center">
-            Craft custom jewellery that reflects your
-            style and personality. We'll help you create a
-            truly special piece.
-          </p>
+        <div className="h-auto mt-[10px]">
+          <div className="font-montserrat font-medium text-[14px] text-gray-200 leading-[10px] text-center" style={{width: 'calc(100vw * (320 / 360))'}}>
+            <p>Craft custom jewellery that reflects your</p>
+            <p>style and personality. We'll help you create a</p>
+            <p>truly special piece.</p>
+          </div>
         </div>
 
         {/* Gap of 32px */}
@@ -1738,40 +1749,40 @@ export default function Home() {
         {/* Row of Images */}
         <div className="flex justify-between">
           <div>
-            <img src="krayr love notes mobile 1.png" alt="Image 1" className="w-[154px] h-[150px]" />
-            <div className="w-[154px] h-auto mt-[12px]">
-              <p className="font-montserrat font-medium text-[10px] text-gray-200 leading-[21px]">
-                "Finding the perfect diamond
-                was effortless with Krayr.
-                Their extensive selection,
-                from classic styles to vibrant
-                colored lab diamonds,
-                provides endless options."
-              </p>
+            <img src="krayr love notes mobile 1.png" alt="Image 1" className="h-[150px]" style={{width: `calc(100vw * (154 / 360))`}} />
+            <div className="mt-[12px]">
+              <div className="font-montserrat font-medium text-[10px] text-gray-200 leading-[10px]" style={{width: `calc(100vw * (154/360))`}}>
+                <p>"Finding the perfect diamond</p>
+                <p>was effortless with Krayr.</p>
+                <p>Their extensive selection,</p>
+                <p>from classic styles to vibrant</p>
+                <p>colored lab diamonds,</p>
+                <p>provides endless options."</p>
+              </div>
             </div>
-            <div className="w-[154px] h-[15px] mt-auto">
-              <p className="font-montserrat font-medium text-[10px] text-gray-200 leading-[15px]">
+            <div className="pt-[50px]">
+              <p className="font-montserrat font-medium text-[10px] text-gray-200 leading-[15px]" style={{width: `calc(100vw * (154 / 360))`}} >
                 - Amir Mansour
               </p>
             </div>
           </div>
 
           <div>
-            <img src="krayr love notes mobile 2.png" alt="Image 2" className="w-[154px] h-[150px]" />
-            <div className="w-[154px] h-auto mt-[12px]">
-              <p className="font-montserrat font-medium text-[10px] text-gray-200 leading-[21px]">
-                "Krayr stands out with its vast
-                array of diamond options.
-                With numerous styles, carat
-                sizes, cuts, and colors to
-                choose from, their Lab
-                Diamonds and Lab Created
-                Colored Diamonds are the
-                best I've seen in the market"
-              </p>
+            <img src="krayr love notes mobile 2.png" alt="Image 2" className="h-[150px]" style={{width: `calc(100vw * (154 / 360))`}} />
+            <div className="mt-[12px]">
+              <div className="font-montserrat font-medium text-[10px] text-gray-200 leading-[10px]">
+                <p>"Krayr stands out with its vast</p>
+                <p>array of diamond options.</p>
+                <p>With numerous styles, carat</p>
+                <p>sizes, cuts, and colors to</p>
+                <p>choose from, their Lab</p>
+                <p>Diamonds and Lab Created</p>
+                <p>Colored Diamonds are the</p>
+                <p>best I've seen in the market"</p>
+              </div>
             </div>
-            <div className="w-[154px] h-[15px] mt-[12px]">
-              <p className="font-montserrat font-medium text-[10px] text-gray-200 leading-[15px]">
+            <div className="pt-[10px]">
+              <p className="font-montserrat font-medium text-[10px] text-gray-200 leading-[15px]" style={{width: `calc(100vw * (154 / 360))`}}>
                 - Amanda Rose
               </p>
             </div>
@@ -1782,7 +1793,7 @@ export default function Home() {
         <div className="h-[24px]"></div>
 
         {/* Button */}
-        <div className="w-[320px] h-[45px] mx-auto">
+        <div className="h-[45px] mx-auto">
           <button className="w-full h-full bg-palevioletred text-white font-bold font-montserrat transition duration-300 hover:bg-palevioletred/80">
             View all Reviews
           </button>
@@ -1853,8 +1864,10 @@ export default function Home() {
 
       {/* Get Inspired and shop Instagram component for Mobile screens */}
 
+      
 
-      <div className="block md:hidden w-[320px] h-[229px] mt-[35px] px-[20px] py-[24px] relative">
+
+      <div className="block md:hidden h-[229px] mt-[35px] px-[20px] py-[24px] relative" style={{width: 'calc(100vw * (320 / 360))'}} >
 
         <div className=" bg-maroon">
           {/* First Text Container */}
@@ -1869,17 +1882,17 @@ export default function Home() {
 
           {/* Scrollable Row of Images */}
           <div className="pl-[20px] overflow-x-auto scrollbar-hidden overflow-hidden flex gap-[8px]">
-            <div className="flex-shrink-0 w-[74px] h-[94px] bg-center bg-cover"
-              style={{ backgroundImage: "url('get inspired and shop instagram mobile 1.png')" }}>
+            <div className="flex-shrink-0 h-[94px] bg-center bg-cover"
+              style={{ backgroundImage: "url('get inspired and shop instagram mobile 1.png')",width: `calc(100vw * (74/360))`}}>
             </div>
             <div className="flex-shrink-0 w-[74px] h-[94px] bg-center bg-cover"
-              style={{ backgroundImage: "url('get inspired and shop instagram mobile 2.png')" }}>
+              style={{ backgroundImage: "url('get inspired and shop instagram mobile 2.png')",width: `calc(100vw * (74/360))` }}>
             </div>
             <div className="flex-shrink-0 w-[74px] h-[94px] bg-center bg-cover"
-              style={{ backgroundImage: "url('get inspired and shop instagram mobile 3.png')" }}>
+              style={{ backgroundImage: "url('get inspired and shop instagram mobile 3.png')",width: `calc(100vw * (74/360))` }}>
             </div>
             <div className="flex-shrink-0 w-[74px] h-[94px] bg-center bg-cover"
-              style={{ backgroundImage: "url('get inspired and shop instagram mobile 4.png')" }}>
+              style={{ backgroundImage: "url('get inspired and shop instagram mobile 4.png')",width: `calc(100vw * (74/360))` }}>
             </div>
           </div>
 
@@ -1916,7 +1929,7 @@ export default function Home() {
 
       {/* Krayr collection 2 for Mobile screens */}
 
-      <div className="block md:hidden w-[360px] h-[230px] mt-[40px] pb-[5px] mx-auto relative mb-[20px]">
+      <div className="block md:hidden w-full h-[230px] mt-[40px] pb-[5px] mx-auto relative mb-[20px]">
         {/* Background Image */}
         <div className="absolute w-full h-full bg-cover bg-center"
           style={{ backgroundImage: "url('krayr collection 2 mobile.png')" }}>
@@ -1974,10 +1987,10 @@ export default function Home() {
 
       {/* Join the krayr universe Component for Mobile Screens */}
 
-      <div className="block md:hidden w-[320px] h-[184px] mt-[56px] mb-[20px] mx-auto px-[20px]">
+      <div className="block md:hidden h-[184px] mt-[56px] mb-[20px] mx-auto px-[20px]" style={{width: `calc(100vw * (320/360))`}}>
         {/* First Text Container */}
-        <div className="w-[316px]">
-          <p className="font-montserrat font-semibold text-[22px] leading-[30px] text-black">
+        <div>
+          <p className="font-montserrat font-semibold text-[22px] leading-[30px] text-black" style={{width: `calc(100vw * (316/360))`}}>
             {/* Add your text content here */}
             Join The Krayr Movement
           </p>
@@ -1987,21 +2000,21 @@ export default function Home() {
         <div className="mt-[10px]"></div>
 
         {/* Second Text Container */}
-        <div className="w-[320px] h-[72px]">
-          <p className="font-montserrat font-medium text-[16px] leading-[21px] text-gray-200">
+        <div className="h-[72px]">
+          <div className="font-montserrat font-medium text-[16px] leading-[10px] text-gray-200" style={{width: `calc(100vw * (320/360))`}}>
             {/* Add your text content here */}
-            Discover its magnificent icons,
-            personalised services and unique
-            experiences
-          </p>
+            <p>Discover its magnificent icons,</p>
+            <p>personalised services and unique</p>
+            <p>experiences</p>
+          </div>
         </div>
 
         {/* Gap of 24px */}
         <div className="mt-[24px]"></div>
 
         {/* Button */}
-        <div className="w-[320px] h-[48px]">
-          <button className="w-full h-full bg-palevioletred text-white font-semibold font-montserrat hover:bg-fadedpalevioletred active:bg-fadedpalevioletred transition ease-in-out duration-200 ">
+        <div className="h-[48px]">
+          <button className="h-full bg-palevioletred text-white font-semibold font-montserrat hover:bg-fadedpalevioletred active:bg-fadedpalevioletred transition ease-in-out duration-200 " style={{width: `calc(100vw * (320/360))`}}>
             Sign Up Now
           </button>
         </div>
@@ -2153,7 +2166,7 @@ export default function Home() {
         </div>
 
         {/* Bottom Text Container */}
-        <div className="w-full h-[18px] mt-[42px] mb-[20px] text-center font-montserrat text-[12px] text-gray-200 font-medium leading-[18px] flex justify-center">
+        <div className="w-full h-[18px] md:block mt-[42px] mb-[20px] text-center font-montserrat text-[12px] text-gray-200 font-medium leading-[18px] hidden justify-center">
           ©2024 Krayr Diamonds | Terms and Conditions | Privacy Policy
         </div>
 
@@ -2162,7 +2175,7 @@ export default function Home() {
       {/* footer component for mobile screens */}
 
 
-      <div className="w-[360px] block md:hidden h-[612px] mt-[56px] bg-[#F9F6F4] relative">
+      <div className="w-full block md:hidden h-[569px] mt-[56px] bg-[#F9F6F4] relative">
 
         <div className="absolute inset-0 w-[386px] h-[569px] bg-cover bg-center"
           style={{ backgroundImage: "url('footer vector image mobile.png')" }}></div>
@@ -2170,14 +2183,14 @@ export default function Home() {
 
         <div className="relative p-[16px]">
 
-          <div className="w-[320px] h-[20px] mb-[12px] flex items-center justify-center text-center">
-            <p className="font-montserrat uppercase font-semibold text-[14px] leading-[20px] text-black">
+          <div className="h-[20px] mb-[12px] flex items-center justify-center text-center">
+            <p className="font-montserrat uppercase font-semibold text-[14px] leading-[20px] text-black" style={{width: `calc(100vw * (360/360))`}}>
               contact us
             </p>
           </div>
 
 
-          <div className="flex gap-[24px] items-center mb-[16px] px-[100px]">
+          <div className="w-full flex gap-[24px] items-center justify-center mb-[16px]">
 
             <div className="text-center">
               <div className="w-[26px] h-[26px] bg-cover bg-center"
@@ -2205,53 +2218,53 @@ export default function Home() {
           </div>
 
 
-          <div className="mb-[16px] w-[320px] px-[10px] py-[16px] flex items-center border-b border-b-black">
-            <div className="w-[300px] h-[20px] font-montserrat uppercase font-semibold text-[14px] leading-[20px] text-black">
+          <div className="mb-[16px] px-[10px] py-[16px] flex items-center border-b border-b-black" style={{width: `calc(100vw * (320/360))`}}>
+            <div className="h-[20px] font-montserrat uppercase font-semibold text-[14px] leading-[20px] text-black" style={{width: `calc(100vw * (300/360))`}}>
               About
             </div>
-            <div className="w-[20px] h-[20px] bg-cover bg-center ml-auto"
-              style={{ backgroundImage: `url('plus.svg')` }}></div>
+            <div className="h-[20px] bg-cover bg-center ml-auto"
+              style={{ backgroundImage: `url('plus.svg')`,width: `calc(100vw * (20/360))` }}></div>
           </div>
 
-          <div className="mb-[16px] w-[320px] px-[10px] py-[16px] flex items-center border-b border-gray-200">
-            <div className="w-[300px] h-[20px] font-montserrat uppercase font-semibold text-[14px] leading-[20px] text-black">
+          <div className="mb-[16px] px-[10px] py-[16px] flex items-center border-b border-gray-200" style={{width: `calc(100vw * (320/360))`}}>
+            <div className="h-[20px] font-montserrat uppercase font-semibold text-[14px] leading-[20px] text-black" style={{width: `calc(100vw * (300/360))`}}>
               Education
             </div>
-            <div className="w-[20px] h-[20px] bg-cover bg-center ml-auto"
-              style={{ backgroundImage: `url('plus.svg')` }}></div>
+            <div className="h-[20px] bg-cover bg-center ml-auto"
+              style={{ backgroundImage: `url('plus.svg')`,width:`calc(100vw * (20/360))` }}></div>
           </div>
 
-          <div className="mb-[16px] w-[320px] px-[10px] py-[16px] flex items-center border-b border-gray-200">
-            <div className="w-[300px] h-[20px] font-montserrat uppercase font-semibold text-[14px] leading-[20px] text-black">
+          <div className="mb-[16px] px-[10px] py-[16px] flex items-center border-b border-gray-200" style={{width: `calc(100vw * (320/360))`}}>
+            <div className="h-[20px] font-montserrat uppercase font-semibold text-[14px] leading-[20px] text-black" style={{width: `calc(100vw * (300/360))`}}>
               Orders
             </div>
-            <div className="w-[20px] h-[20px] bg-cover bg-center ml-auto"
-              style={{ backgroundImage: `url('plus.svg')` }}></div>
+            <div className="h-[20px] bg-cover bg-center ml-auto"
+              style={{ backgroundImage: `url('plus.svg')`,width: `calc(100vw * (20/360))` }}></div>
           </div>
 
-          <div className="mb-[16px] w-[320px] px-[10px] py-[16px] flex items-center border-b border-gray-200">
-            <div className="w-[300px] h-[20px] font-montserrat uppercase font-semibold text-[14px] leading-[20px] text-black">
+          <div className="mb-[16px] px-[10px] py-[16px] flex items-center border-b border-gray-200" style={{width: `calc(100vw * (320/360))`}}>
+            <div className="h-[20px] font-montserrat uppercase font-semibold text-[14px] leading-[20px] text-black" style={{width: `calc(100vw * (300/360))`}}>
               Customer Service
             </div>
-            <div className="w-[20px] h-[20px] bg-cover bg-center ml-auto"
-              style={{ backgroundImage: `url('plus.svg')` }}></div>
+            <div className="h-[20px] bg-cover bg-center ml-auto"
+              style={{ backgroundImage: `url('plus.svg')`,width:`calc(100vw * (20/360))` }}></div>
           </div>
 
 
-          <div className="w-[146px] mb-[10px] px-[10px]">
-            <p className="font-montserrat uppercase font-semibold text-[12px] leading-[18px] text-black">
+          <div className="mb-[10px] px-[10px]">
+            <p className="font-montserrat uppercase font-semibold text-[12px] leading-[18px] text-black" style={{width: `calc(100vw * (146/360))`}}>
               sign up for email
             </p>
           </div>
-          <div className="w-[248px] h-[18px] mb-[18px] px-[10px]">
-            <p className="font-montserrat font-medium text-[12px] leading-[18px] text-gray-200">
+          <div className="h-[18px] mb-[18px] px-[10px]">
+            <p className="font-montserrat font-medium text-[12px] leading-[18px] text-gray-200" style={{width: `calc(100vw * (248/360))`}}>
               Send me Krayr news, updates and offers.
             </p>
           </div>
 
 
-          <div className="w-[320px] flex items-center mb-[24px] px-[10px]">
-            <input type="text" className="w-[240px] h-[40px] px-[12px] border text-gray-200 border-gray-200" placeholder="Your Email Address" />
+          <div className="flex items-center mb-[24px] px-[10px]" style={{width: `calc(100vw * (320/360))`}}>
+            <input type="text" className="h-[40px] px-[12px] border font-montserrat text-gray-200 border-gray-300" placeholder="Your Email Address" style={{width: `calc(100vw * (240/360))`}} />
             <button className="w-[48px] h-[44px] bg-palevioletred text-white flex items-center justify-center">
               <img src="/chevron-right.svg" alt="Chevron Right" className="w-[24px] h-[24px]" />
             </button>
@@ -2268,12 +2281,14 @@ export default function Home() {
           </div>
 
 
-          <div className="w-[320px] h-[36px] text-center mb-[9px]">
-            <p className="font-montserrat font-medium text-[12px] leading-[18px] text-gray-200">
-              ©2024 Krayr Diamonds | Terms and Conditions |
-              Privacy Policy
-            </p>
-          </div>
+
+        </div>
+      </div>
+
+      <div className="w-full block md:hidden max-w-[412px] text-center mb-[9px]">
+        <div className="font-montserrat font-medium text-[14px] leading-[5px] text-gray-200">
+          <p>©2024 Krayr Diamonds | Terms and Conditions |</p>
+          <p>Privacy Policy</p>
         </div>
       </div>
 
